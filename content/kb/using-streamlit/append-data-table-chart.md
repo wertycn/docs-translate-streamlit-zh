@@ -1,11 +1,11 @@
 ---
-title: 向表格或图表附加数据
 slug: /knowledge-base/using-streamlit/append-data-table-chart
+title: Append data to a table or chart
 ---
 
-# 向表格或图表附加数据
+# 向表格或图表追加数据
 
-在Streamlit中，您不仅可以替换应用程序中的整个元素，还可以修改这些元素背后的数据。以下是如何操作的步骤：
+在Streamlit中，您不仅可以替换应用程序中的整个元素，还可以修改这些元素背后的数据。下面是如何操作的步骤:
 
 ```python
 import numpy as np

@@ -1,7 +1,7 @@
 ---
-title: st.form_submit_button
+description: st.form_submit_button displays a form submit button.
 slug: /library/api-reference/control-flow/st.form_submit_button
-description: st.form_submit_button用于显示一个表单提交按钮。
+title: st.form_submit_button
 ---
 
-<Autofunction function="streamlit.form_submit_button" />
+`<Autofunction function="streamlit.form_submit_button" />`

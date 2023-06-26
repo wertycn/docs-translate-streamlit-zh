@@ -1,21 +1,23 @@
 ---
-标题: st.data_editor
-网址: /library/api-reference/data/st.data_editor
-描述: st.data_editor 显示一个数据编辑器小部件，允许您在类似表格的用户界面中编辑数据帧和许多其他数据结构。
+description: st.data_editor display a data editor widget that allows you to edit dataframes
+  and many other data structures in a table-like UI.
+slug: /library/api-reference/data/st.data_editor
+title: st.data_editor
+---
 
-<Tip>
+<提示>
 
-本页面仅包含有关 `st.data_editor` API 的信息。如果您想深入了解如何使用数据帧以及数据编辑器的功能和限制，请阅读[数据帧](/library/advanced-features/dataframes)。
+本页面仅包含关于`st.data_editor` API的信息。如果您想更深入地了解如何使用数据帧和数据编辑器的功能和限制，请阅读[数据帧](/library/advanced-features/dataframes)。
 
-</Tip>
+</提示>
 
-<Autofunction function="streamlit.data_editor" />
+<自动函数函数="streamlit.data_editor" />
 
 ### 列配置
 
-在使用Streamlit处理数据时，[`st.column_config`](/library/api-reference/data/st.column_config)类是一个强大的工具，用于配置数据的显示和交互。它专门为[`st.dataframe`](/library/api-reference/data/st.dataframe)和[`st.data_editor`](/library/api-reference/data/st.data_editor)中的`column_config`参数设计，提供了一套方法，以适应各种数据类型——从简单的文本和数字到列表、URL、图像等。
+在使用Streamlit处理数据时，[`st.column_config`](/library/api-reference/data/st.column_config)类是一个强大的工具，用于配置数据的显示和交互。它专门为[`st.dataframe`](/library/api-reference/data/st.dataframe)和[`st.data_editor`](/library/api-reference/data/st.data_editor)中的`column_config`参数设计，提供了一系列方法来为各种数据类型（从简单的文本和数字到列表、URL、图像等）定制列。
 
-无论是将时间数据转换为用户友好的格式，还是利用图表和进度条进行更清晰的数据可视化，列配置不仅为用户提供了丰富的数据查看体验，而且还确保您具备以您希望的方式呈现和与数据交互的工具。
+无论是将时间数据转化为用户友好的格式，还是利用图表和进度条进行更清晰的数据可视化，列配置不仅为用户提供了丰富的数据查看体验，还确保您拥有以您想要的方式呈现和与数据交互的工具。
 
 <TileContainer>
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.column">
@@ -23,7 +25,7 @@
 
 #### Column
 
-配置一个通用列。
+配置通用列。
 
 ```python
 Column("Streamlit Widgets", width="medium", help="Streamlit **widget** commands 🎈")
@@ -35,7 +37,7 @@ Column("Streamlit Widgets", width="medium", help="Streamlit **widget** commands 
 
 #### 文本列
 
-配置文本列。
+配置一个文本列。
 
 ```python
 TextColumn("Widgets", max_chars=50, validate="^st\.[a-z_]+$")
@@ -46,9 +48,9 @@ TextColumn("Widgets", max_chars=50, validate="^st\.[a-z_]+$")
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.numbercolumn">
 <Image pure alt="screenshot" src="/images/api/column_config.numbercolumn.jpg" />
 
-#### 数值列
+#### 数字列
 
-配置一个数值列。
+配置数字列。
 
 ```python
 NumberColumn("Price (in USD)", min_value=0, format="$%d")
@@ -72,9 +74,9 @@ CheckboxColumn("Your favorite?", help="Select your **favorite** widgets")
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.selectboxcolumn">
 <Image pure alt="screenshot" src="/images/api/column_config.selectboxcolumn.jpg" />
 
-#### 选择框列
+#### 下拉框列
 
-配置一个选择框列。
+配置一个下拉框列。
 
 ```python
 SelectboxColumn("App Category", options=["🤖 LLM", "📈 Data Viz"])
@@ -149,9 +151,9 @@ LinkColumn("Trending apps", max_chars=100, validate="^https://.*$")
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.imagecolumn">
 <Image pure alt="screenshot" src="/images/api/column_config.imagecolumn.jpg" />
 
-#### 图像列
+#### 图片列
 
-配置图像列。
+配置一个图片列。
 
 ```python
 ImageColumn("Preview Image", help="The preview screenshots")
@@ -190,7 +192,7 @@ BarChartColumn("Marketing spend" y_min=0, y_max=100)
 
 #### 进度列
 
-配置进度列。
+配置一个进度列。
 
 ```python
 ProgressColumn("Sales volume", min_value=0, max_value=1000, format="$%f")

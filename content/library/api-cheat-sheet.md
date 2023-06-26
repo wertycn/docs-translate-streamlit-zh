@@ -1,11 +1,11 @@
 ---
-title: 快速参考指南
 slug: /library/cheatsheet
+title: Cheat sheet
 ---
 
-# 快速参考指南
+# 快速参考手册
 
-这是有关文档的摘要，截至[Streamlit v1.23.0](https://pypi.org/project/streamlit/1.22.0/)。
+这是文档的摘要，截至 [Streamlit v1.23.0](https://pypi.org/project/streamlit/1.22.0/)。
 
 <Masonry>
 
@@ -20,11 +20,11 @@ streamlit run first_app.py
 >>> import streamlit as st
 ```
 
-`</CodeTile>`
+</CodeTile>
 
-`<CodeTile featured>`
+<CodeTile featured>
 
-#### 命令行
+#### Command line
 
 ```python
 streamlit --help
@@ -47,7 +47,7 @@ pip uninstall streamlit
 pip install streamlit-nightly --upgrade
 ```
 
-了解更多有关[实验性功能](advanced-features/prerelease#experimental-features)的信息
+了解更多关于[实验性功能](advanced-features/prerelease#experimental-features)的信息
 
 </CodeTile>
 
@@ -57,7 +57,7 @@ pip install streamlit-nightly --upgrade
 
 <CodeTile>
 
-#### 魔法命令
+#### 魔术命令
 
 ```python
 # Magic commands implicitly
@@ -88,7 +88,6 @@ st.code('for i in range(8): foo()')
 ```
 
 </CodeTile>
-
 
 <CodeTile>
 
@@ -171,7 +170,7 @@ st.video(data)
 
 <CodeTile>
 
-#### Control flow
+#### 控制流程
 
 ```python
 # Stop execution immediately:
@@ -227,7 +226,7 @@ st.color_picker('Pick a color')
 
 <CodeTile>
 
-#### 修改数据
+#### 数据变形
 
 ```python
 # Add rows to a dataframe after
@@ -387,7 +386,7 @@ st.exception(e)
 <Masonry>
 <CodeTile>
 
-#### 为用户个性化定制应用程序
+#### 为用户个性化应用程序
 
 ```python
 # Show different content based on the user's email address.

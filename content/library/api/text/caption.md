@@ -1,9 +1,9 @@
 ---
-标题: st.caption
-标识: /library/api-reference/text/st.caption
-描述: st.caption以小字体显示文本。
+description: st.caption displays text in small font.
+slug: /library/api-reference/text/st.caption
+title: st.caption
+---
 
 <Autofunction function="streamlit.caption" />
 
 <Image src="/images/api/st.caption.png" clean />
----

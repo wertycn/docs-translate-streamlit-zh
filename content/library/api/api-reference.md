@@ -1,15 +1,15 @@
 ---
-title: API 参考
-slug: /library/api-reference
 next: caching
 previous: index.md
+slug: /library/api-reference
+title: API Reference
 ---
 
-# API 参考
+# API参考文档
 
-Streamlit 使您能够轻松可视化、变异和共享数据。API 参考按活动类型组织，例如显示数据或优化性能。每个部分都包括与活动类型相关联的方法，包括示例。
+Streamlit使您能够轻松地可视化、变化和共享数据。API参考文档按活动类型进行组织，如显示数据或优化性能。每个部分都包括与活动类型相关联的方法，包括示例。
 
-浏览下面的 API，并单击以了解有关任何可用命令的更多信息！ 🎈
+请浏览下面的API，并单击了解有关任何可用命令的更多信息！ 🎈
 
 ## 几乎可以显示任何内容
 
@@ -29,9 +29,9 @@ st.write(my_mpl_figure)
 </RefCard>
 <RefCard href="/library/api-reference/write-magic/magic">
 
-#### Magic
+#### Magic（魔法）
 
-每当Streamlit在单独的一行上看到变量或字面值时，它会自动使用`st.write`将其写入您的应用程序中。
+每当Streamlit在自己的一行上看到变量或文字值时，它会自动使用`st.write`将其写入您的应用程序中。
 
 ```python
 "Hello **world**!"
@@ -51,7 +51,7 @@ my_mpl_figure
 
 #### Markdown
 
-以Markdown格式显示字符串。
+以Markdown格式显示的字符串。
 
 ```python
 st.markdown("Hello **world**!")
@@ -77,7 +77,7 @@ st.title("The app title")
 
 #### 头部
 
-以标题格式显示文本。
+以标题格式显示文本内容。
 
 ```python
 st.header("This is a header")
@@ -88,9 +88,9 @@ st.header("This is a header")
 
 <Image pure alt="screenshot" src="/images/api/subheader.jpg" />
 
-#### 子标题
+#### Subheader
 
-以子标题格式显示文本。
+Display text in subheader formatting.
 
 ```python
 st.subheader("This is a subheader")
@@ -114,9 +114,9 @@ st.caption("This is written small caption text")
 
 <Image pure alt="screenshot" src="/images/api/code.jpg" />
 
-#### Code block
+#### 代码块
 
-Display a code block with optional syntax highlighting.
+显示一个带有可选语法高亮的代码块。
 
 ```python
 st.code("a = 1234")
@@ -153,9 +153,9 @@ st.latex("\int a x^2 \,dx")
 
 <Image pure alt="screenshot" src="/images/api/divider.jpg" />
 
-#### 分隔线
+#### 分割线
 
-显示一条水平线。
+显示一个水平分隔线。
 
 ```python
 st.divider()
@@ -169,9 +169,9 @@ st.divider()
 
 <Image pure alt="screenshot" src="/images/api/components/annotated-text.jpg" />
 
-#### 带注释的文本
+#### 注释文本
 
-在Streamlit应用程序中显示带注释的文本。由[@tvst](https://github.com/tvst)创建。
+在Streamlit应用程序中显示注释文本。由[@tvst](https://github.com/tvst)创建。
 
 ```python
 annotated_text("This ", ("is", "verb"), " some ", ("annotated", "adj"), ("text", "noun"), " for those of ", ("you", "pronoun"), " who ", ("like", "verb"), " this sort of ", ("thing", "noun"), ".")
@@ -213,7 +213,7 @@ st_tags(label='# Enter Keywords:', text='Press enter to add more', value=['Zero'
 
 #### NLU
 
-在数据帧上应用文本挖掘。由[@JohnSnowLabs](https://github.com/JohnSnowLabs/)创建。
+在数据框上应用文本挖掘。由[@JohnSnowLabs](https://github.com/JohnSnowLabs/)创建。
 
 ```python
 nlu.load('sentiment').predict('I love NLU! <3')
@@ -227,7 +227,7 @@ nlu.load('sentiment').predict('I love NLU! <3')
 
 #### Streamlit Extras
 
-一个包含有用的Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
+一个带有实用Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
 
 ```python
 mention(label="An awesome Streamlit App", icon="streamlit",  url="https://extras.streamlit.app",)
@@ -295,7 +295,7 @@ st.table(my_data_frame)
 
 #### 指标
 
-以大胆的字体显示指标，可选择性地显示指标变化的指示器。
+以粗体大字体显示指标，可选显示指标变化的指示器。
 
 ```python
 st.metric("My metric", 42, 2)
@@ -307,7 +307,7 @@ st.metric("My metric", 42, 2)
 
 #### 字典和JSON
 
-将对象或字符串以漂亮的JSON字符串形式显示。
+将对象或字符串显示为格式漂亮的JSON字符串。
 
 ```python
 st.json(my_dict)
@@ -390,9 +390,9 @@ st.write(value)
 
 <Image pure alt="screenshot" src="/images/api/components/plotly-events.jpg" />
 
-#### Plotly 事件
+#### Plotly事件
 
-使 Plotly 图表具有交互性！由 [@null-jones](https://github.com/null-jones/) 创建。
+使Plotly图表具有交互性！由[@null-jones](https://github.com/null-jones/)创建。
 
 ```python
 from streamlit_plotly_events import plotly_events
@@ -409,7 +409,7 @@ selected_points = plotly_events(fig)
 
 #### Streamlit Extras
 
-一个带有有用的Streamlit附加组件的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
+一个包含有用的Streamlit扩展功能的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
 
 ```python
 from streamlit_extras.metric_cards import style_metric_cards
@@ -430,7 +430,7 @@ style_metric_cards()
 
 #### 简单折线图
 
-显示一张折线图。
+显示一个折线图。
 
 ```python
 st.line_chart(my_data_frame)
@@ -440,9 +440,9 @@ st.line_chart(my_data_frame)
 <RefCard href="/library/api-reference/charts/st.area_chart">
 <Image pure alt="screenshot" src="/images/api/area_chart.jpg" />
 
-#### 简单区域图表
+#### 简单面积图
 
-显示一个区域图表。
+显示一个面积图。
 
 ```python
 st.area_chart(my_data_frame)
@@ -466,7 +466,7 @@ st.bar_chart(my_data_frame)
 
 #### 在地图上显示散点图
 
-显示一个带有散点的地图。
+在地图上显示带有数据点的图形。
 
 ```python
 st.map(my_data_frame)
@@ -478,7 +478,7 @@ st.map(my_data_frame)
 
 #### Matplotlib
 
-显示一个 matplotlib.pyplot 图形。
+Display a matplotlib.pyplot figure.
 
 ```python
 st.pyplot(my_mpl_figure)
@@ -486,7 +486,7 @@ st.pyplot(my_mpl_figure)
 
 </RefCard>
 <RefCard href="/library/api-reference/charts/st.altair_chart">
-<Image pure alt="截图" src="/images/api/vega_lite_chart.jpg" />
+<Image pure alt="screenshot" src="/images/api/vega_lite_chart.jpg" />
 
 #### Altair
 
@@ -514,7 +514,7 @@ st.vega_lite_chart(my_vega_lite_chart)
 
 #### Plotly
 
-显示一个交互式的Plotly图表。
+Display an interactive Plotly chart.
 
 ```python
 st.plotly_chart(my_plotly_chart)
@@ -567,7 +567,7 @@ st.graphviz_chart(my_graphviz_spec)
 
 #### Plost
 
-一款对于Streamlit来说，看似简单的绘图库。由[@tvst](https://github.com/tvst)创建。
+Plost是一个Streamlit的简单绘图库，由[@tvst](https://github.com/tvst)创建。
 
 ```python
 import plost
@@ -642,7 +642,7 @@ spacy_streamlit.visualize(models, "Sundar Pichai is the CEO of Google.")
 
 #### Streamlit Agraph
 
-基于[react-grah-vis](https://github.com/crubier/react-graph-vis)的Streamlit图形可视化组件。由[@ChrisDelClea](https://github.com/ChrisDelClea)创建。
+基于 [react-grah-vis](https://github.com/crubier/react-graph-vis) 的 Streamlit 图表组件。由 [@ChrisDelClea](https://github.com/ChrisDelClea) 创建。
 
 ```python
 from streamlit_agraph import agraph, Node, Edge, Config
@@ -672,7 +672,7 @@ st_lottie(lottie_hello, key="hello")
 
 #### Plotly 事件
 
-使 Plotly 图表变得交互！由 [@null-jones](https://github.com/null-jones/) 创建。
+使Plotly图表具有交互功能！由[@null-jones](https://github.com/null-jones/)创建。
 
 ```python
 fig = px.line(x=[1], y=[1])
@@ -687,7 +687,7 @@ selected_points = plotly_events(fig)
 
 #### Streamlit Extras
 
-Streamlit Extras是一个包含有用的Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
+Streamlit Extras是一个带有有用的Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
 
 ```python
 chart += get_annotations_chart(annotations=[("Mar 01, 2008", "Pretty good day for GOOG"), ("Dec 01, 2007", "Something's going wrong for GOOG & AAPL"), ("Nov 01, 2008", "Market starts again thanks to..."), ("Dec 01, 2009", "Small crash for GOOG after..."),],)
@@ -757,9 +757,9 @@ selected = st.checkbox("I agree")
 
 <Image pure alt="screenshot" src="/images/api/radio.jpg" />
 
-#### 单选按钮
+#### 单选框
 
-显示一个单选按钮小部件。
+显示一个单选框小部件。
 
 ```python
 choice = st.radio("Pick one", ["cats", "dogs"])
@@ -783,9 +783,9 @@ choice = st.selectbox("Pick one", ["cats", "dogs"])
 
 <Image pure alt="screenshot" src="/images/api/multiselect.jpg" />
 
-#### 多选
+#### 多选框
 
-显示一个多选小部件。多选小部件一开始是空的。
+显示一个多选框小部件。多选框小部件一开始是空的。
 
 ```python
 choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
@@ -798,7 +798,7 @@ choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
 
 #### 滑块
 
-显示滑块小部件。
+显示一个滑块小部件。
 
 ```python
 number = st.slider("Pick a number", 0, 100)
@@ -928,7 +928,7 @@ color = st.color_picker("Pick a color")
 
 <ComponentCard href="https://github.com/okld/streamlit-elements">
 
-<Image pure alt="screenshot" src="/images/api/components/elements.jpg" />
+<Image pure alt="截图" src="/images/api/components/elements.jpg" />
 
 #### Streamlit Elements
 
@@ -941,15 +941,15 @@ with elements("new_element"):
   mui.Typography("Hello world")
 ```
 
-</ComponentCard>
+&lt;/ComponentCard&gt;
 
-<ComponentCard href="https://github.com/gagan3012/streamlit-tags">
+&lt;ComponentCard href="https://github.com/gagan3012/streamlit-tags"&gt;
 
-<Image pure alt="screenshot" src="/images/api/components/tags.jpg" />
+&lt;Image pure alt="screenshot" src="/images/api/components/tags.jpg" /&gt;
 
 #### 标签
 
-在您的Streamlit应用程序中添加标签。由[@gagan3012](https://github.com/gagan3012)创建。
+在您的Streamlit应用中添加标签。由[@gagan3012](https://github.com/gagan3012)创建。
 
 ```python
 from streamlit_tags import st_tags
@@ -983,7 +983,7 @@ for _ in stqdm(range(50)):
 
 #### 时间轴
 
-使用[TimelineJS](https://timeline.knightlab.com/)在Streamlit应用中显示时间轴。由[@innerdoc](https://github.com/innerdoc)创建。
+使用[TimelineJS](https://timeline.knightlab.com/)在Streamlit应用中展示时间轴。由[@innerdoc](https://github.com/innerdoc)创建。
 
 ```python
 from streamlit_timeline import timeline
@@ -998,9 +998,9 @@ with open('example.json', "r") as f:
 
 <Image pure alt="screenshot" src="/images/api/components/camera-live.jpg" />
 
-#### 实时相机输入
+#### 实时摄像头输入
 
-用于替代st.camera_input的相机实时输入组件。由[@blackary](https://github.com/blackary)创建。
+这是`st.camera_input`的替代方案，可以实时返回摄像头图像。由[@blackary](https://github.com/blackary)创建。
 
 ```python
 from camera_input_live import camera_input_live
@@ -1032,9 +1032,9 @@ content
 
 <Image pure alt="screenshot" src="/images/api/components/chat.jpg" />
 
-#### Streamlit 聊天界面
+#### Streamlit 聊天
 
-Streamlit聊天界面组件。由[@AI-Yash](https://github.com/AI-Yash)创建。
+Streamlit的聊天机器人UI组件。由[@AI-Yash](https://github.com/AI-Yash)创建。
 
 ```python
 from streamlit_chat import message
@@ -1051,7 +1051,7 @@ message("Hello bot!", is_user=True)  # align's the message to the right
 
 #### Streamlit选项菜单
 
-从菜单中的选项列表中选择单个项目。由[@victoryhb](https://github.com/victoryhb)创建。
+从菜单中的选项列表中选择一个项目。由[@victoryhb](https://github.com/victoryhb)创建。
 
 ```python
 from streamlit_option_menu import option_menu
@@ -1068,7 +1068,7 @@ option_menu("Main Menu", ["Home", 'Settings'],
 
 #### Streamlit Extras
 
-一个带有有用的Streamlit附加功能的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
+一个包含有用的Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
 
 ```python
 from streamlit_extras.stoggle import stoggle
@@ -1086,11 +1086,11 @@ stoggle(
 <TileContainer>
 <RefCard href="/library/api-reference/media/st.image">
 
-<Image pure alt="screenshot" src="/images/api/image.jpg" />
+<Image pure alt="截图" src="/images/api/image.jpg" />
 
 #### 图像
 
-显示一张或多张图片。
+显示一个图像或图像列表。
 
 ```python
 st.image(numpy_array)
@@ -1142,7 +1142,7 @@ st.video("https://example.com/myvideo.mp4", format="video/mp4")
 
 #### Streamlit Webrtc
 
-使用Streamlit处理和传输实时的视频/音频流。由[@whitphx](https://github.com/whitphx)创建。
+使用Streamlit处理和传输实时视频/音频流。由[@whitphx](https://github.com/whitphx)创建。
 
 ```python
 from streamlit_webrtc import webrtc_streamer
@@ -1174,7 +1174,7 @@ st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke
 
 #### 图片对比
 
-使用[JuxtaposeJS](https://juxtapose.knightlab.com/)实现通过滑块对比图片功能。由[@fcakyon](https://github.com/fcakyon)创建。
+使用[JuxtaposeJS](https://juxtapose.knightlab.com/)来通过滑块对比图片。由[@fcakyon](https://github.com/fcakyon)创建。
 
 ```python
 from streamlit_image_comparison import image_comparison
@@ -1188,9 +1188,9 @@ image_comparison(img1="image1.jpg", img2="image2.jpg",)
 
 <Image pure alt="screenshot" src="/images/api/components/cropper.jpg" />
 
-#### Streamlit 图像裁剪器
+#### Streamlit Cropper
 
-一个简单的用于Streamlit的图像裁剪器。由[@turner-anderson](https://github.com/turner-anderson)创建。
+一个用于Streamlit的简单图像裁剪工具。由[@turner-anderson](https://github.com/turner-anderson)创建。
 
 ```python
 from streamlit_cropper import st_cropper
@@ -1222,7 +1222,7 @@ streamlit_image_coordinates("https://placekitten.com/200/300")
 
 #### Streamlit Lottie
 
-在Streamlit应用程序中集成[Lottie](https://lottiefiles.com/)动画。由[@andfanilo](https://github.com/andfanilo)创建。
+在您的Streamlit应用程序中集成[Lottie](https://lottiefiles.com/)动画。由[@andfanilo](https://github.com/andfanilo)创建。
 
 ```python
 lottie_hello = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
@@ -1255,9 +1255,9 @@ st.sidebar.button("Click me!")
 
 <Image pure alt="screenshot" src="/images/api/columns.jpg" />
 
-#### 列布局
+#### Columns
 
-插入作为并排列出的容器。
+插入作为并排列出的列的容器。
 
 ```python
 col1, col2 = st.columns(2)
@@ -1272,7 +1272,7 @@ col2.write("this is column 2")
 
 #### 标签页
 
-将容器分成多个标签页插入。
+将内容分组放置在不同的标签页中。
 
 ```python
 tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
@@ -1285,7 +1285,7 @@ tab2.write("this is tab 2")
 
 <Image pure alt="screenshot" src="/images/api/expander.jpg" />
 
-#### 展开器（Expander）
+#### 扩展器
 
 插入一个可以展开/折叠的多元素容器。
 
@@ -1297,7 +1297,7 @@ with st.expander("Open to see more"):
 </RefCard>
 <RefCard href="/library/api-reference/layout/st.container">
 
-<Image pure alt="screenshot" src="/images/api/container.jpg" />
+<Image pure alt="屏幕截图" src="/images/api/container.jpg" />
 
 #### 容器
 
@@ -1317,7 +1317,7 @@ c.write("This will show second")
 
 #### 空白
 
-插入一个单元素容器。
+插入一个只包含一个元素的容器。
 
 ```python
 c = st.empty()
@@ -1337,7 +1337,7 @@ c.write("This will show first")
 
 #### Streamlit Elements
 
-在Streamlit中创建可拖动和可调整大小的仪表板。由[@okls](https://github.com/okls)创建。
+使用Streamlit在应用程序中创建可拖动和可调整大小的仪表板。由[@okls](https://github.com/okls)创建。
 
 ```python
 from streamlit_elements import elements, mui, html
@@ -1354,7 +1354,7 @@ with elements("new_element"):
 
 #### Pydantic
 
-从Pydantic模型和数据类自动生成Streamlit用户界面。由[@lukasmasuch](https://github.com/lukasmasuch)创建。
+从Pydantic模型和Dataclasses自动生成Streamlit用户界面。由[@lukasmasuch](https://github.com/lukasmasuch)创建。
 
 ```python
 import streamlit_pydantic as sp
@@ -1369,7 +1369,7 @@ sp.pydantic_form(key="my_form",
 
 <Image pure alt="screenshot" src="/images/api/components/pages.jpg" />
 
-#### Streamlit 页面
+#### Streamlit页面
 
 Streamlit多页面应用程序的实验版本。由[@blackary](https://github.com/blackary)创建。
 
@@ -1384,16 +1384,16 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 
 </ComponentSlider>
 
-## Display progress and status
+## 显示进度和状态
 
 <TileContainer>
 <RefCard href="/library/api-reference/status/st.progress">
 
 <Image pure alt="screenshot" src="/images/api/progress.jpg" />
 
-#### Progress bar
+#### 进度条
 
-Display a progress bar.
+显示进度条。
 
 ```python
 for i in range(101):
@@ -1420,9 +1420,9 @@ with st.spinner("Please wait..."):
 
 <Image pure alt="screenshot" src="/images/api/balloons.jpg" />
 
-#### 气球
+#### 彩色气球
 
-显示庆祝气球！
+显示庆祝用的彩色气球！
 
 ```python
 do_something()
@@ -1438,7 +1438,7 @@ st.balloons()
 
 #### 雪花
 
-显示庆祝的雪花！
+显示庆祝雪花！
 
 ```python
 do_something()
@@ -1480,7 +1480,7 @@ st.warning("Unable to fetch image. Skipping...")
 
 #### 信息框
 
-显示一条信息提示。
+显示一个信息性的消息。
 
 ```python
 st.info("Dataset is updated every day at midnight.")
@@ -1506,7 +1506,7 @@ st.success("Match found!")
 
 #### 异常输出
 
-显示异常信息。
+显示一个异常。
 
 ```python
 e = RuntimeError("This is an exception of type RuntimeError")
@@ -1559,7 +1559,7 @@ custom_notification_box(icon='info', textDisplay='We are almost done with your r
 
 #### Streamlit Extras
 
-一个包含有用的Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
+一个带有有用的Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
 
 ```python
 from streamlit_extras.let_it_rain import rain
@@ -1572,7 +1572,7 @@ rain(emoji="🎈", font_size=54,
 
 </ComponentSlider>
 
-## 控制流程
+## 控制流
 
 <TileContainer>
 <RefCard href="/library/api-reference/control-flow/st.form">
@@ -1581,7 +1581,7 @@ rain(emoji="🎈", font_size=54,
 
 #### 表单
 
-创建一个表单，将元素批量组合在一起，并包含一个“提交”按钮。
+创建一个包含“提交”按钮的表单，将元素批量组合在一起。
 
 ```python
 with st.form(key='my_form'):
@@ -1612,18 +1612,18 @@ st.stop()
 st.experimental_rerun()
 ```
 
-\</RefCard>
-\</TileContainer>
+</RefCard>
+</TileContainer>
 
-\ComponentSlider>
+<ComponentSlider>
 
-\ComponentCard href="https://github.com/kmcgrady/streamlit-autorefresh">
+<ComponentCard href="https://github.com/kmcgrady/streamlit-autorefresh">
 
-\Image pure alt="screenshot" src="/images/api/components/autorefresh.jpg" />
+<Image pure alt="screenshot" src="/images/api/components/autorefresh.jpg" />
 
 #### 自动刷新
 
-在不绑定脚本的情况下强制刷新。由[@kmcgrady](https://github.com/kmcgrady)创建。
+在不阻塞脚本的情况下强制刷新。由[@kmcgrady](https://github.com/kmcgrady)创建。
 
 ```python
 from streamlit_autorefresh import st_autorefresh
@@ -1640,7 +1640,7 @@ st_autorefresh(interval=2000, limit=100,
 
 #### Pydantic
 
-使用Pydantic模型和数据类自动生成Streamlit UI界面。由[@lukasmasuch](https://github.com/lukasmasuch)创建。
+从Pydantic模型和数据类自动生成Streamlit UI。由[@lukasmasuch](https://github.com/lukasmasuch)创建。
 
 ```python
 import streamlit_pydantic as sp
@@ -1657,7 +1657,7 @@ sp.pydantic_form(key="my_form",
 
 #### Streamlit Pages
 
-Streamlit多页面应用的实验性版本。由[@blackary](https://github.com/blackary)创建。
+Streamlit多页面应用程序的实验版本。由[@blackary](https://github.com/blackary)创建。
 
 ```python
 from st_pages import Page, show_pages, add_page_title
@@ -1680,7 +1680,7 @@ show_pages([ Page("streamlit_app.py", "Home", "🏠"),
 
 #### Pandas Profiling
 
-Pandas Profiling是Streamlit的一个组件。由[@okld](https://github.com/okld/)创建。
+Pandas Profiling 是用于 Streamlit 的组件。由 [@okld](https://github.com/okld/) 创建。
 
 ```python
 df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
@@ -1712,9 +1712,9 @@ content
 
 <Image pure alt="screenshot" src="/images/api/components/analytics.jpg" />
 
-#### Streamlit分析
+#### Streamlit 分析
 
-跟踪并可视化用户与您的Streamlit应用程序的交互。由[@jrieke](https://github.com/jrieke)创建。
+跟踪和可视化用户与您的Streamlit应用程序的交互。由[@jrieke](https://github.com/jrieke)创建。
 
 ```python
 import streamlit_analytics
@@ -1762,7 +1762,7 @@ with st.echo():
 
 #### 获取帮助
 
-显示对象的文档字符串，并进行格式化显示。
+显示对象的文档字符串，格式良好。
 
 ```python
 st.help(st.write)
@@ -1804,7 +1804,7 @@ st.experimental_set_query_params(
 
 #### 添加行
 
-将数据框附加到当前数据框的底部的特定位置，以进行优化的数据更新。
+在特定元素中将一个数据框追加到当前数据框的底部，以进行优化的数据更新。
 
 ```python
 element = st.line_chart(df)
@@ -1821,7 +1821,7 @@ element.add_rows(df_with_extra_rows)
 
 #### 会话状态
 
-会话状态是一种在每个用户会话中共享变量的方式。
+会话状态是一种在每个用户会话中共享变量的方式，用于多次运行之间的数据传递。
 
 ```python
 st.session_state['key'] = value
@@ -1838,9 +1838,9 @@ st.session_state['key'] = value
 
 <Image pure alt="screenshot" src="/images/api/components/authenticator.jpg" />
 
-#### 鉴权模块
+#### 验证器
 
-一个安全的鉴权模块，用于验证用户凭据。由[@mkhorasani](https://github.com/mkhorasani)创建。
+一个安全的身份验证模块，用于验证用户凭据。由[@mkhorasani](https://github.com/mkhorasani)创建。
 
 ```python
 import streamlit_authenticator as stauth
@@ -1857,7 +1857,7 @@ config['cookie']['key'], config['cookie']['expiry_days'], config['preauthorized'
 
 #### WS localStorage
 
-一个简单的同步方式，用于从您的应用程序中访问localStorage。由[@gagangoku](https://github.com/gagangoku)创建。
+一个简单的同步方式，用于从您的应用程序访问localStorage。由[@gagangoku](https://github.com/gagangoku)创建。
 
 ```python
 from streamlit_ws_localstorage import injectWebsocketCode
@@ -1870,11 +1870,11 @@ st.write('ret: ' + ret)
 
 <ComponentCard href="https://github.com/conradbez/streamlit-auth0">
 
-<Image pure alt="截图" src="/images/api/components/auth0.jpg" />
+<Image pure alt="screenshot" src="/images/api/components/auth0.jpg" />
 
 #### Streamlit Auth0
 
-在Streamlit中提供全面登录的最快方式。由[@conradbez](https://github.com/conradbez)创建。
+提供在Streamlit内进行全面登录的最快方式。由[@conradbez](https://github.com/conradbez)创建。
 
 ```python
 from auth0_component import login_button
@@ -1894,7 +1894,7 @@ st.write(user_info)
 
 #### 缓存数据
 
-用于缓存返回数据的函数装饰器（例如数据帧转换、数据库查询、机器学习推断）。
+用于缓存返回数据的函数装饰器（例如数据帧转换、数据库查询、机器学习推理）。
 
 ```python
 @st.cache_data
@@ -1910,7 +1910,7 @@ def long_function(param1, param2):
 
 #### 缓存资源
 
-用于缓存返回全局资源的函数装饰器（例如数据库连接、ML模型）。
+函数装饰器，用于缓存返回全局资源的函数（例如数据库连接、ML模型）。
 
 ```python
 @st.cache_resource
@@ -1964,6 +1964,9 @@ if st.checkbox("Clear All"):
   st.cache_data.clear()
 ```
 
+</RefCard>
+</TileContainer>
+
 ## 连接和数据库
 
 ### 设置您的连接
@@ -1996,7 +1999,7 @@ st.dataframe(pet_owners)
 
 #### SQLConnection
 
-使用SQLAlchemy连接到SQL数据库的连接。
+使用SQLAlchemy连接到SQL数据库。
 
 ```python
 conn = st.experimental_connection('sql')
@@ -2010,7 +2013,7 @@ conn = st.experimental_connection('sql')
 
 #### SnowparkConnection
 
-与Snowflake Snowpark的连接。
+一个连接到Snowflake Snowpark的连接。
 
 ```python
 conn = st.experimental_connection('snowpark')
@@ -2026,7 +2029,7 @@ conn = st.experimental_connection('snowpark')
 
 #### 连接基类
 
-使用`ExperimentalBaseConnection`构建您自己的连接。
+使用`ExperimentalBaseConnection`构建自己的连接。
 
 ```python
 class MyConnection(ExperimentalBaseConnection[myconn.MyConnection]):
@@ -2047,7 +2050,7 @@ class MyConnection(ExperimentalBaseConnection[myconn.MyConnection]):
 
 #### 用户信息
 
-`st.experimental_user` 返回有关 Streamlit Community Cloud 上私有应用程序的已登录用户的信息。
+`st.experimental_user` 返回有关 Streamlit 社区云上私有应用程序中已登录用户的信息。
 
 ```python
 if st.experimental_user.email == "foo@corp.com":

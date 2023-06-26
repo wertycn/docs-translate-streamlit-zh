@@ -1,13 +1,14 @@
 ---
-标题：st.cache_resource.clear
-链接：/library/api-reference/performance/st.cache_resource.clear
-描述：st.cache_resource.clear 清除所有 cache_resource 缓存。
+description: st.cache_resource.clear clears all cache_resource caches.
+slug: /library/api-reference/performance/st.cache_resource.clear
+title: st.cache_resource.clear
+---
 
 <Autofunction function="streamlit.cache_resource.clear" />
 
 #### 示例
 
-在下面的示例中，点击“清除全部”按钮将清除所有 cache_resource 缓存。即清除所有使用 `@st.cache_resource` 装饰的函数的全局资源缓存。
+在下面的示例中，点击"Clear All"按钮将清除所有的`cache_resource`缓存。即清除所有使用`@st.cache_resource`装饰的函数缓存的全局资源。
 
 ```python
 import streamlit as st

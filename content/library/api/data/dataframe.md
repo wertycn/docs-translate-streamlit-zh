@@ -1,15 +1,20 @@
 ---
-标题：st.dataframe
-网址：/library/api-reference/data/st.dataframe
-描述：st.dataframe 将数据帧显示为交互式表格。
+description: st.dataframe displays a dataframe as an interactive table.
+slug: /library/api-reference/data/st.dataframe
+title: st.dataframe
+---
 
-<Tip>
+<提示>
 
-本页面仅包含关于 `st.dataframe` API 的信息。如果您想更深入地了解如何处理数据帧，请阅读 [数据帧](/library/advanced-features/dataframes)。如果您想让用户可以交互地编辑数据帧，请查看 [`st.data_editor`](/library/api-reference/data/st.data_editor)。
+本页面只包含关于`st.dataframe` API的信息。如果您想深入了解如何使用数据框，请阅读[数据框](/library/advanced-features/dataframes)。如果您希望让用户可以交互式地编辑数据框，请查看[`st.data_editor`](/library/api-reference/data/st.data_editor)。
 
-</Tip>
+</提示>
 
-`st.dataframe`函数支持`use_container_width`参数，可以使其占满整个容器宽度:
+<自动函数 函数="streamlit.dataframe" />
+
+<br />
+
+`st.dataframe`支持`use_container_width`参数，可以使其宽度占满整个容器：
 
 ```python
 import pandas as pd
@@ -39,15 +44,15 @@ st.dataframe(df, use_container_width=st.session_state.use_container_width)
 
 ### 列配置
 
-在使用Streamlit处理数据时，[`st.column_config`](/library/api-reference/data/st.column_config)类是一个用于配置数据显示和交互的强大工具。该类专门为[`st.dataframe`](/library/api-reference/data/st.dataframe)和[`st.data_editor`](/library/api-reference/data/st.data_editor)的`column_config`参数设计，它提供了一套方法，可以根据不同的数据类型来自定义列 - 从简单的文本和数字到列表、URL、图片等等。
+在使用Streamlit处理数据时，[`st.column_config`](/library/api-reference/data/st.column_config) 类是一种强大的工具，用于配置数据的显示和交互。它专门设计用于 [`st.dataframe`](/library/api-reference/data/st.dataframe) 和 [`st.data_editor`](/library/api-reference/data/st.data_editor) 的 `column_config` 参数，提供了一套方法来根据不同的数据类型来定制您的列 - 从简单的文本和数字到列表、URL、图像等等。
 
-无论是将时间数据转换为用户友好的格式，还是利用图表和进度条进行更清晰的数据可视化，列配置不仅为用户提供了丰富的数据查看体验，而且确保您拥有以您想要的方式呈现和与数据进行交互的工具。
+无论是将时间数据转换成用户友好的格式，还是利用图表和进度条进行更清晰的数据可视化，列配置不仅为用户提供了丰富的数据查看体验，还确保您具备以您想要的方式呈现和交互数据的工具。
 
 <TileContainer>
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.column">
-![屏幕截图](/images/api/column_config.column.jpg)
+![screenshot](/images/api/column_config.column.jpg)
 
-#### 列
+#### 列配置
 
 配置一个通用列。
 
@@ -83,7 +88,7 @@ NumberColumn("Price (in USD)", min_value=0, format="$%d")
 </RefCard>
 
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.checkboxcolumn">
-<Image pure alt="屏幕截图" src="/images/api/column_config.checkboxcolumn.jpg" />
+<Image pure alt="screenshot" src="/images/api/column_config.checkboxcolumn.jpg" />
 
 #### 复选框列
 
@@ -100,7 +105,7 @@ CheckboxColumn("Your favorite?", help="Select your **favorite** widgets")
 
 #### 选择框列
 
-配置选择框列。
+配置一个选择框列。
 
 ```python
 SelectboxColumn("App Category", options=["🤖 LLM", "📈 Data Viz"])
@@ -122,7 +127,7 @@ DatetimeColumn("Appointment", min_value=datetime(2023, 6, 1), format="D MMM YYYY
 </RefCard>
 
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.datecolumn">
-<Image pure alt="截图" src="/images/api/column_config.datecolumn.jpg" />
+<Image pure alt="screenshot" src="/images/api/column_config.datecolumn.jpg" />
 
 #### 日期列
 
@@ -139,7 +144,7 @@ DateColumn("Birthday", max_value=date(2005, 1, 1), format="DD.MM.YYYY")
 
 #### 时间列
 
-配置时间列。
+配置一个时间列。
 
 ```python
 TimeColumn("Appointment", min_value=time(8, 0, 0), format="hh:mm a")
@@ -175,9 +180,9 @@ LinkColumn("Trending apps", max_chars=100, validate="^https://.*$")
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.imagecolumn">
 <Image pure alt="screenshot" src="/images/api/column_config.imagecolumn.jpg" />
 
-#### 图片列
+#### 图像列
 
-配置图片列。
+配置图像列。
 
 ```python
 ImageColumn("Preview Image", help="The preview screenshots")
@@ -199,11 +204,11 @@ LineChartColumn("Sales (last 6 months)" y_min=0, y_max=100)
 </RefCard>
 
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.barchartcolumn">
-<Image pure alt="截图" src="/images/api/column_config.barchartcolumn.jpg" />
+<Image pure alt="screenshot" src="/images/api/column_config.barchartcolumn.jpg" />
 
-#### 条形图列
+#### 柱状图列
 
-配置一个条形图列。
+配置一个柱状图列。
 
 ```python
 BarChartColumn("Marketing spend" y_min=0, y_max=100)
@@ -214,9 +219,9 @@ BarChartColumn("Marketing spend" y_min=0, y_max=100)
 <RefCard href="/library/api-reference/data/st.column_config/st.column_config.progresscolumn">
 <Image pure alt="screenshot" src="/images/api/column_config.progresscolumn.jpg" />
 
-#### 进度列
+#### Progress column
 
-配置一个进度列。
+Configure a progress column.
 
 ```python
 ProgressColumn("Sales volume", min_value=0, max_value=1000, format="$%f")
@@ -228,12 +233,12 @@ ProgressColumn("Sales volume", min_value=0, max_value=1000, format="$%f")
 
 ### 交互性
 
-使用`st.dataframe`显示的数据框具有以下交互功能：
+使用`st.dataframe`显示的数据帧具有以下交互功能：
 
-- **列排序**：通过单击列标题进行排序。
-- **列调整大小**：通过拖动和放置列标题边界来调整列大小。
-- **表格（高度、宽度）调整大小**：通过拖动和放置表格的右下角来调整表格大小。
-- **搜索**：通过单击表格，在搜索栏中使用热键（`⌘ Cmd + F` 或 `Ctrl + F`）来搜索数据，并使用搜索栏来筛选数据。
-- **复制到剪贴板**：选择一个或多个单元格，将它们复制到剪贴板，并粘贴到您喜欢的电子表格软件中。
+- **列排序**：通过点击列标题进行排序。
+- **列调整大小**：通过拖动和放置列头边框来调整列的大小。
+- **表格（高度、宽度）调整大小**：通过拖动和放置表格右下角来调整表格的大小。
+- **搜索**：通过点击表格，在搜索栏中使用快捷键（`⌘ Cmd + F` 或 `Ctrl + F`）进行搜索，并使用搜索栏过滤数据。
+- **复制到剪贴板**：选择一个或多个单元格，将其复制到剪贴板，然后粘贴到您喜欢的电子表格软件中。
 
-<Image src="/images/dataframe-ui.gif" />
+![数据框界面演示图](/images/dataframe-ui.gif)

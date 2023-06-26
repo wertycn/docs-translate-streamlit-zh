@@ -1,24 +1,24 @@
 ---
-title: st.cache
+description: st.cache is used to memoize function executions.
 slug: /library/api-reference/performance/st.cache
-description: st.cache用于缓存函数执行结果。
+title: st.cache
 ---
 
 # st.cache
 
-当您使用Streamlit的缓存注解标记一个函数时，它告诉Streamlit在每次调用函数时应该检查三件事情：
+当您使用Streamlit的缓存注解标记一个函数时，它告诉Streamlit在每次调用该函数时应该检查三个方面：
 
 1. 函数的名称
-2. 函数体的实际代码
-3. 调用函数时的输入参数
+2. 构成函数主体的实际代码
+3. 您调用函数时的输入参数
 
-如果这是Streamlit第一次看到这三个项目，并且具有这些确切的值和确切的组合，它将运行该函数并将结果存储在本地缓存中。
+如果这是Streamlit首次看到这三个项目，并且具有相同的值和组合方式，它将运行该函数并将结果存储在本地缓存中。
 
-然后，下次调用该函数时，如果这三个值没有发生变化，Streamlit就知道可以完全跳过执行该函数。相反，它只是从本地缓存中读取输出并将其传递给调用者。
+然后，下次调用该函数时，如果这三个值没有改变，Streamlit会知道可以完全跳过执行该函数。相反，它只需从本地缓存中读取输出，并将其传递给调用者。
 
-主要限制在于Streamlit的缓存功能不知道...
-在注释函数的主体外部发生的更改。
+主要的限制是Streamlit的缓存功能无法感知到在注释函数的代码块之外发生的变化。
 
-有关Streamlit缓存、其配置参数和限制的更多信息，请参阅[Caching](/library/advanced-features/caching)。
+有关Streamlit缓存及其配置参数的更多信息，请参阅相关文档。
+有关其限制的详细信息，请参阅[Caching](/library/advanced-features/caching)。
 
-<Autofunction function="streamlit.cache" deprecated={true} deprecatedText="<code>st.cache</code>在1.18.0版本中已被弃用。请使用<a href='/library/api-reference/performance/st.cache_data'><code>st.cache_data</code></a>或<a href='/library/api-reference/performance/st.cache_resource'><code>st.cache_resource</code></a>替代。在<a href='/library/advanced-features/caching'>Caching</a>中了解更多信息。"/>
+<Autofunction function="streamlit.cache" deprecated={true} deprecatedText="<code>st.cache</code>在1.18.0版本中已弃用。请改用<a href='/library/api-reference/performance/st.cache_data'><code>st.cache_data</code></a>或<a href='/library/api-reference/performance/st.cache_resource'><code>st.cache_resource</code></a>。在<a href='/library/advanced-features/caching'>Caching</a>中了解更多信息。"/>

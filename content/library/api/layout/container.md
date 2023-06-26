@@ -1,7 +1,7 @@
 ---
-title: st.container
+description: st.container inserts a multi-element container.
 slug: /library/api-reference/layout/st.container
-description: st.container插入一个多元素容器。
+title: st.container
 ---
 
 <Autofunction function="streamlit.container" />

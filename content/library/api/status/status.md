@@ -1,10 +1,11 @@
 ---
-标题: 显示进度和状态
 slug: /library/api-reference/status
+title: Display progress and status
+---
 
 # 显示进度和状态
 
-Streamlit提供了一些方法，可以让您为应用程序添加动画效果。这些动画包括进度条、状态消息（如警告）和庆祝气球。
+Streamlit提供了一些方法，可以让您为应用程序添加动画效果。这些动画效果包括进度条、状态消息（如警告）和庆祝气球。
 
 <TileContainer>
 <RefCard href="/library/api-reference/status/st.progress">
@@ -38,11 +39,11 @@ with st.spinner("Please wait..."):
 </RefCard>
 <RefCard href="/library/api-reference/status/st.balloons">
 
-<Image pure alt="屏幕截图" src="/images/api/balloons.jpg" />
+<Image pure alt="screenshot" src="/images/api/balloons.jpg" />
 
 #### 气球
 
-显示庆祝气球！
+展示庆祝的气球！
 
 ```python
 do_something()
@@ -54,11 +55,11 @@ st.balloons()
 </RefCard>
 <RefCard href="/library/api-reference/status/st.snow">
 
-<Image pure alt="屏幕截图" src="/images/api/snow.jpg" />
+<Image pure alt="截图" src="/images/api/snow.jpg" />
 
 #### 雪花
 
-显示庆祝的雪花！
+展示庆祝用的雪花！
 
 ```python
 do_something()
@@ -74,7 +75,7 @@ st.snow()
 
 #### 错误框
 
-显示错误信息。
+显示错误消息。
 
 ```python
 st.error("We encountered an error")
@@ -87,7 +88,7 @@ st.error("We encountered an error")
 
 #### 警告框
 
-显示警告消息。
+显示警告信息。
 
 ```python
 st.warning("Unable to fetch image. Skipping...")
@@ -100,7 +101,7 @@ st.warning("Unable to fetch image. Skipping...")
 
 #### 信息框
 
-显示一条信息提示消息。
+显示一条信息性的消息。
 
 ```python
 st.info("Dataset is updated every day at midnight.")
@@ -113,7 +114,7 @@ st.info("Dataset is updated every day at midnight.")
 
 #### 成功框
 
-显示一个成功的消息。
+显示成功消息。
 
 ```python
 st.success("Match found!")
@@ -126,7 +127,7 @@ st.success("Match found!")
 
 #### 异常输出
 
-显示异常信息。
+显示一个异常。
 
 ```python
 e = RuntimeError("This is an exception of type RuntimeError")
@@ -144,7 +145,7 @@ st.exception(e)
 
 #### Stqdm
 
-在Streamlit应用程序中处理进度条最简单的方法。由[@Wirg](https://github.com/Wirg)创建。
+在Streamlit应用程序中处理进度条的最简单方式。由[@Wirg](https://github.com/Wirg)创建。
 
 ```python
 from stqdm import stqdm
@@ -161,7 +162,7 @@ for _ in stqdm(range(50)):
 
 #### 自定义通知框
 
-一个带有关闭功能的自定义通知框。由[@Socvest](https://github.com/Socvest)创建。
+一个具有关闭功能的自定义通知框。由[@Socvest](https://github.com/Socvest)创建。
 
 ```python
 from streamlit_custom_notification_box import custom_notification_box
@@ -178,7 +179,7 @@ custom_notification_box(icon='info', textDisplay='We are almost done with your r
 
 #### Streamlit Extras
 
-Streamlit Extras是一个提供有用的Streamlit扩展功能的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
+一个包含有用的Streamlit额外功能的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
 
 ```python
 from streamlit_extras.let_it_rain import rain

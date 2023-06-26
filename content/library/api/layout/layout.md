@@ -1,13 +1,13 @@
 ---
-title: 布局和容器
 slug: /library/api-reference/layout
+title: Layouts and Containers
 ---
 
 # 布局和容器
 
 ## 复杂布局
 
-Streamlit 提供了多种选项来控制不同元素在屏幕上的布局。
+Streamlit提供了多种选项来控制屏幕上不同元素的布局。
 
 <TileContainer>
 <RefCard href="/library/api-reference/layout/st.sidebar">
@@ -28,7 +28,7 @@ st.sidebar.button("Click me!")
 
 <Image pure alt="screenshot" src="/images/api/columns.jpg" />
 
-#### 列
+#### 列布局
 
 插入作为并排列出的容器。
 
@@ -45,7 +45,7 @@ col2.write("this is column 2")
 
 #### 标签页
 
-将内容插入到分隔的标签页容器中。
+插入分隔为选项卡的容器。
 
 ```python
 tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
@@ -110,7 +110,7 @@ c.write("This will show first")
 
 #### Streamlit Elements
 
-在Streamlit中创建可拖动和可调整大小的仪表板。由[@okls](https://github.com/okls)创建。
+在Streamlit中创建一个可拖拽和可调整大小的仪表盘。由[@okls](https://github.com/okls)创建。
 
 ```python
 from streamlit_elements import elements, mui, html
@@ -127,7 +127,7 @@ with elements("new_element"):
 
 #### Pydantic
 
-从Pydantic模型和数据类自动生成Streamlit用户界面。由[@lukasmasuch](https://github.com/lukasmasuch)创建。
+使用Pydantic模型和数据类自动生成Streamlit用户界面。由[@lukasmasuch](https://github.com/lukasmasuch)创建。
 
 ```python
 import streamlit_pydantic as sp
@@ -142,9 +142,9 @@ sp.pydantic_form(key="my_form",
 
 <Image pure alt="screenshot" src="/images/api/components/pages.jpg" />
 
-#### Streamlit Pages
+#### Streamlit 页面
 
-Streamlit多页面应用程序的实验版本。由[@blackary](https://github.com/blackary)创建。
+Streamlit多页面应用程序的实验性版本。由[@blackary](https://github.com/blackary)创建。
 
 ```python
 from st_pages import Page, show_pages, add_page_title

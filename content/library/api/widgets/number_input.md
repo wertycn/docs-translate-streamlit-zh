@@ -1,7 +1,7 @@
 ---
-title: st.number_input
+description: st.number_input displays a numeric input widget.
 slug: /library/api-reference/widgets/st.number_input
-description: st.number_input 显示一个数字输入小部件。
+title: st.number_input
 ---
 
-<Autofunction function="streamlit.number_input" />
+`streamlit.number_input` 函数。

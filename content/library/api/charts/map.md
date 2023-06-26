@@ -1,7 +1,7 @@
 ---
-title: st.map
+description: st.map displays a map with points on it.
 slug: /library/api-reference/charts/st.map
-description: st.map显示带有标记点的地图。
+title: st.map
 ---
 
-<Autofunction function="streamlit.map" />
+`<Autofunction function="streamlit.map" />`

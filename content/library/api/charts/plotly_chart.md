@@ -1,17 +1,18 @@
 ---
-标题: st.plotly_chart
+description: st.plotly_chart displays an interactive Plotly chart.
 slug: /library/api-reference/charts/st.plotly_chart
-描述: st.plotly_chart显示一个交互式的Plotly图表。
+title: st.plotly_chart
+---
 
 <Autofunction function="streamlit.plotly_chart" />
 
 ### 主题
 
-默认情况下，Plotly图表使用Streamlit的主题显示。这个主题时尚、用户友好，并且融合了Streamlit的颜色调色板。另一个好处是，您的图表能更好地与应用程序的其他设计融合在一起。
+默认情况下，Plotly 图表使用 Streamlit 主题进行显示。该主题设计简洁、用户友好，并结合了 Streamlit 的颜色调色板。另一个好处是，您的图表能更好地与应用程序的设计整合。
 
-从Streamlit 1.16.0开始，可以通过使用`theme="streamlit"`关键字参数来使用Streamlit主题。要禁用它并使用Plotly的原生主题，可以使用`theme=None`。
+Streamlit 主题从 Streamlit 1.16.0 版本开始可用，通过 `theme="streamlit"` 关键字参数进行设置。如果要禁用它，并使用 Plotly 的原生主题，请使用 `theme=None`。
 
-让我们看一个使用Streamlit主题和原生Plotly主题的图表示例：
+让我们来看一个使用Streamlit主题和原生Plotly主题的图表示例：
 
 ```python
 import plotly.express as px
@@ -40,13 +41,13 @@ with tab2:
     st.plotly_chart(fig, theme=None, use_container_width=True)
 ```
 
-点击下面的交互应用程序中的选项卡，可以查看启用和禁用Streamlit主题的图表。
+点击下面的交互应用程序中的选项卡，查看启用和禁用Streamlit主题的图表。
 
 <Cloud src="https://doc-plotly-chart-theme.streamlit.app/?embed=true" height="525" />
 
-如果你想知道你自己的定制是否会被考虑进去，不用担心！你仍然可以对图表配置进行更改。换句话说，虽然我们现在默认启用了Streamlit主题，但你可以使用自定义的颜色或字体来覆盖它。例如，如果你想要将图表线条的颜色设置为绿色而不是默认的红色，你可以这样做！
+如果您想知道自定义的配置是否仍然会被考虑，请不用担心！您仍然可以对图表配置进行更改。换句话说，尽管我们现在默认启用Streamlit主题，但您可以使用自定义颜色或字体进行覆盖。例如，如果您想将图表线条改为绿色而不是默认的红色，您可以这样做！
 
-下面是一个Plotly图表的示例，其中定义了一个自定义颜色比例尺并进行了反映：
+以下是一个Plotly图表的示例，其中定义了一个自定义颜色比例尺并反映了出来：
 
 ```python
 import plotly.express as px
@@ -69,7 +70,7 @@ with tab2:
     st.plotly_chart(fig, theme=None, use_container_width=True)
 ```
 
-注意，即使启用了Streamlit主题，自定义颜色比例仍然会反映在图表中👇
+请注意，即使启用了Streamlit主题，自定义颜色比例仍会在图表中反映出来👇
 
 <Cloud src="https://doc-plotly-custom-colors.streamlit.app/?embed=true" height="650" />
 

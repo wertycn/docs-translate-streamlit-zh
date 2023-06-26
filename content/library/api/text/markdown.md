@@ -1,9 +1,9 @@
 ---
-标题: st.markdown
-网址: /library/api-reference/text/st.markdown
-描述: st.markdown以Markdown格式显示字符串。
+description: st.markdown displays string formatted as Markdown.
+slug: /library/api-reference/text/st.markdown
+title: st.markdown
+---
 
 <Autofunction function="streamlit.markdown" />
 
 <Image src="/images/api/st.markdown.png" clean />
----

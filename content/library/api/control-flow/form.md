@@ -1,7 +1,8 @@
 ---
-标题: st.form
-链接: /library/api-reference/control-flow/st.form
-描述: st.form创建一个将元素批量组合在一起并带有“提交”按钮的表单。
+description: st.form creates a form that batches elements together with a “Submit"
+  button.
+slug: /library/api-reference/control-flow/st.form
+title: st.form
+---
 
 <Autofunction function="streamlit.form" />
----

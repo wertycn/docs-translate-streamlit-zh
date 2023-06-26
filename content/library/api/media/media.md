@@ -1,11 +1,11 @@
 ---
-title: 媒体元素
 slug: /library/api-reference/media
+title: Media elements
 ---
 
 # 媒体元素
 
-您可以轻松地将图像、视频和音频文件直接嵌入到您的Streamlit应用程序中。
+在Streamlit应用程序中直接嵌入图像、视频和音频文件非常简单。
 
 <TileContainer>
 <RefCard href="/library/api-reference/media/st.image">
@@ -96,9 +96,9 @@ st_canvas(fill_color="rgba(255, 165, 0, 0.3)", stroke_width=stroke_width, stroke
 
 <Image pure alt="screenshot" src="/images/api/components/image-comparison.jpg" />
 
-#### 图片对比
+#### 图片比较
 
-使用[JuxtaposeJS](https://juxtapose.knightlab.com/)创建一个带有滑块的图片对比组件。由[@fcakyon](https://github.com/fcakyon)创建。
+使用[JuxtaposeJS](https://juxtapose.knightlab.com/)的滑块来比较图片。由[@fcakyon](https://github.com/fcakyon)创建。
 
 ```python
 from streamlit_image_comparison import image_comparison
@@ -112,9 +112,9 @@ image_comparison(img1="image1.jpg", img2="image2.jpg",)
 
 <Image pure alt="screenshot" src="/images/api/components/cropper.jpg" />
 
-#### Streamlit 图像裁剪器
+#### Streamlit图片裁剪工具
 
-一个用于 Streamlit 的简单图像裁剪器。由 [@turner-anderson](https://github.com/turner-anderson) 创建。
+一个简单的用于Streamlit的图片裁剪工具。由[@turner-anderson](https://github.com/turner-anderson)创建。
 
 ```python
 from streamlit_cropper import st_cropper

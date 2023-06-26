@@ -1,7 +1,8 @@
 ---
-标题：st.metric
-链接：/library/api-reference/data/st.metric
-描述：st.metric以大胆的字体显示指标，并可选择性地显示指标的变化指示器。
+description: st.metric displays a metric in big bold font, with an optional indicator
+  of how the metric changed.
+slug: /library/api-reference/data/st.metric
+title: st.metric
 ---
 
-<Autofunction function="streamlit.metric" />
+`<Autofunction function="streamlit.metric" />`

@@ -1,11 +1,11 @@
 ---
-title: st.write和魔术命令
 slug: /library/api-reference/write-magic
+title: st.write and magic commands
 ---
 
 # st.write和魔术命令
 
-Streamlit有两种简单的方法来将信息显示到您的应用程序中，这通常是您尝试的第一件事：`st.write`和魔术命令。
+Streamlit有两种简单的方式将信息显示在您的应用程序中，这通常是您尝试的第一件事：`st.write`和魔术命令。
 
 <TileContainer>
 <RefCard href="/library/api-reference/write-magic/st.write">
@@ -23,9 +23,9 @@ st.write(my_mpl_figure)
 </RefCard>
 <RefCard href="/library/api-reference/write-magic/magic">
 
-#### 魔法
+#### Magic
 
-每当Streamlit在自己的一行上看到一个变量或字面值时，它会自动使用`st.write`将其写入您的应用程序。
+Any time Streamlit sees either a variable or literal value on its own line, it automatically writes that to your app using `st.write`
 
 ```python
 "Hello **world**!"

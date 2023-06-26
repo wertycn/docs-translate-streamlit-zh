@@ -1,7 +1,7 @@
 ---
-标题: st.date_input
-链接: /library/api-reference/widgets/st.date_input
-描述: st.date_input显示一个日期输入小部件。
+description: st.date_input displays a date input widget.
+slug: /library/api-reference/widgets/st.date_input
+title: st.date_input
 ---
 
-<Autofunction function="streamlit.date_input" />
+`streamlit.date_input`函数的自动功能

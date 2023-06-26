@@ -1,18 +1,18 @@
 ---
-title: 连接和数据库
 slug: /library/api-reference/connections
+title: Connections and databases
 ---
 
 # 连接和数据库
 
-## 设置你的连接
+## 设置您的连接
 
 <TileContainer>
 <RefCard href="/library/api-reference/connections/st.experimental_connection" size="half">
 
 <Image pure alt="screenshot" src="/images/api/connection.jpg" />
 
-#### 创建一个连接
+#### 创建连接
 
 连接到数据源或API
 

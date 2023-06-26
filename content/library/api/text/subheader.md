@@ -1,9 +1,9 @@
 ---
-title: st.subheader
+description: st.subheader displays text in subheader formatting.
 slug: /library/api-reference/text/st.subheader
-description: st.subheader以子标题格式显示文本。
+title: st.subheader
 ---
 
 <Autofunction function="streamlit.subheader" />
 
-<Image src="/images/api.subheader.png" clean />
+<Image src="/images/api/st.subheader.png" clean />

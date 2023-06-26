@@ -1,7 +1,7 @@
 ---
-title: st.exception
+description: st.exception displays an exception.
 slug: /library/api-reference/status/st.exception
-description: st.exception用于显示异常信息。
+title: st.exception
 ---
 
-<Autofunction function="streamlit.exception" />
+`<Autofunction function="streamlit.exception" />`

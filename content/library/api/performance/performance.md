@@ -1,11 +1,11 @@
 ---
-title: 优化性能
 slug: /library/api-reference/performance
+title: Optimize performance
 ---
 
 # 优化性能
 
-Streamlit为数据和全局资源提供了强大的[缓存原语](/library/advanced-features/caching)。它们使得您的应用即使在从网络加载数据、操作大型数据集或执行昂贵的计算时也能保持高性能。
+Streamlit为数据和全局资源提供了强大的[缓存机制](/library/advanced-features/caching)，它们可以使您的应用程序在从网络加载数据、操作大型数据集或执行昂贵的计算时保持高性能。
 
 <TileContainer>
 
@@ -13,7 +13,7 @@ Streamlit为数据和全局资源提供了强大的[缓存原语](/library/advan
 
 #### 缓存数据
 
-用于缓存返回数据的函数装饰器（例如，数据框转换、数据库查询、机器学习推断）。
+用于缓存返回数据的函数装饰器（例如数据框转换、数据库查询、机器学习推断）。
 
 ```python
 @st.cache_data
@@ -65,7 +65,7 @@ if st.checkbox("Clear All"):
 
 <RefCard href="/library/api-reference/performance/st.cache_resource.clear" size="half">
 
-#### 清除缓存的资源
+#### 清除缓存资源
 
 清除所有 `st.cache_resource` 的缓存。
 
@@ -89,7 +89,7 @@ if st.checkbox("Clear All"):
 
 <Important>
 
-下面的所有命令在1.18.0版本中已被弃用。请使用上面的新命令替代。在[Caching](/library/advanced-features/caching)中了解更多。
+所有下面的命令在1.18.0版本中已经被弃用。请使用上面的新命令代替。在[Caching](/library/advanced-features/caching)中了解更多。
 
 </Important>
 
@@ -99,11 +99,11 @@ if st.checkbox("Clear All"):
 
 <RefCard href="/library/api-reference/performance/st.cache" deprecated={true}>
 
-> 在1.18.0版本中，此命令已被弃用。请改用`st.cache_data`或`st.cache_resource`。
+> 这个命令在1.18.0版本中已经被弃用。请使用`st.cache_data`或`st.cache_resource`代替。
 
 #### 缓存
 
-函数装饰器用于缓存函数的执行结果。
+用于缓存函数执行结果的函数装饰器。
 
 ```python
 @st.cache(ttl=3600)
@@ -116,9 +116,9 @@ def run_long_computation(arg1, arg2):
 
 <RefCard href="/library/api-reference/performance/st.experimental_memo" deprecated={true}>
 
-> 此命令在1.18.0版本中已被弃用。请使用`st.cache_data`代替。
+> 这个命令在1.18.0版本中已经被弃用，请使用`st.cache_data`代替。
 
-#### 备忘录
+#### Memo
 
 实验性的函数装饰器，用于缓存函数的执行结果。
 
@@ -133,11 +133,11 @@ def fetch_and_clean_data(url):
 
 <RefCard href="/library/api-reference/performance/st.experimental_singleton" deprecated={true}>
 
-> 此命令在1.18.0版本中已弃用。请改用`st.cache_resource`。
+> 此命令在1.18.0版本中已废弃。请改用`st.cache_resource`。
 
 #### 单例模式
 
-实验性函数装饰器，用于存储单例对象。
+实验性的函数装饰器，用于存储单例对象。
 
 ```python
 @st.experimental_singleton
@@ -150,11 +150,11 @@ def get_database_session(url):
 
 <RefCard href="/library/api-reference/performance/st.experimental_memo.clear" deprecated={true}>
 
-> 此命令在1.18.0版本中已被弃用。请改用`st.cache_data.clear`。
+> 此命令已在版本1.18.0中废弃。请使用`st.cache_data.clear`代替。
 
-#### 清除记忆
+#### 清除备忘录
 
-清除所有内存和磁盘中的记忆缓存。
+清除所有内存和磁盘备忘录缓存。
 
 ```python
 @st.experimental_memo
@@ -171,9 +171,9 @@ if st.checkbox("Clear All"):
 
 <RefCard href="/library/api-reference/performance/st.experimental_singleton.clear"  deprecated={true}>
 
->该命令在1.18.0版本中已经过时。请使用`st.cache_resource.clear`代替。
+> 此命令在版本1.18.0中已弃用。请改用`st.cache_resource.clear`。
 
-#### 清除单例
+#### 清除单例缓存
 
 清除所有单例缓存。
 

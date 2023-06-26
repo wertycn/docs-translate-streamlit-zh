@@ -1,19 +1,19 @@
 ---
-title: st.connections.SQLConnection
 slug: /library/api-reference/connections/st.connections.sqlconnection
+title: st.connections.SQLConnection
 ---
 
-<重要提示>
+<重要>
 
-这是一个实验性功能。实验性功能及其API可能随时更改或删除。要了解更多信息，请点击[这里](/library/advanced-features/prerelease#experimental-features)。
+这是一个实验性功能。实验性功能及其API可能随时更改或删除。要了解更多信息，请点击[此处](/library/advanced-features/prerelease#experimental-features)。
 
-</重要提示>
+</重要>
 
 <提示>
 
-本页面仅包含对 `st.connections.SQLConnection` API 的介绍。如果您想深入了解在Streamlit应用程序中创建和管理数据连接，请阅读[连接到数据](/library/advanced-features/connecting-to-data)。
+此页面仅包含`st.connections.SQLConnection` API的内容。要深入了解在Streamlit应用中创建和管理数据连接，请阅读[连接到数据](/library/advanced-features/connecting-to-data)。
 
-</Tip>
+</提示>
 
 <Autofunction function="streamlit.connections.SQLConnection" />
 
@@ -27,7 +27,7 @@ df = conn.query("select * from pet_owners")
 st.dataframe(df)
 ```
 
-如果您想直接传递连接URL（或其他参数），也是可以的：
+如果您想直接传递连接URL（或其他参数），也是可以的:
 
 ```python
 conn = st.experimental_connection(
@@ -37,7 +37,7 @@ conn = st.experimental_connection(
 )
 ```
 
-或者在[secrets](/library/advanced-features/secrets-management)中指定参数：
+或在 [secrets](/library/advanced-features/secrets-management) 中指定参数：
 
 ```toml
 # .streamlit/secrets.toml
@@ -54,7 +54,7 @@ database = "mydb"
 conn = st.experimental_connection("mydb", type="sql", autocommit=True)
 ```
 
-如上所述，一些云数据库使用额外的 `**kwargs` 来指定凭证。可以通过使用 `create_engine_kwargs` 部分来传递这些凭证。
+正如上述所述，一些云数据库使用额外的`**kwargs`来指定凭据。可以通过使用`create_engine_kwargs`部分来传递这些凭据。
 
 ```toml
 # .streamlit/secrets.toml

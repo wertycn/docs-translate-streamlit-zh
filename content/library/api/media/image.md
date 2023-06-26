@@ -1,7 +1,7 @@
 ---
-标题: st.image
-路径: /library/api-reference/media/st.image
-描述: st.image用于显示图片或图片列表。
+description: st.image displays an image or list of images.
+slug: /library/api-reference/media/st.image
+title: st.image
 ---
 
 <Autofunction function="streamlit.image" />

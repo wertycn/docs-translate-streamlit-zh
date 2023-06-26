@@ -1,7 +1,7 @@
 ---
-标题: st.pydeck_chart
-网址: /library/api-reference/charts/st.pydeck_chart
-描述: st.pydeck_chart 使用 PyDeck 库显示图表。
+description: st.pydeck_chart displays a chart using the PyDeck library.
+slug: /library/api-reference/charts/st.pydeck_chart
+title: st.pydeck_chart
+---
 
 <Autofunction function="streamlit.pydeck_chart" />
----

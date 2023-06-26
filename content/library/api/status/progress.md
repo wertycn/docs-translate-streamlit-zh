@@ -1,7 +1,7 @@
 ---
-title: st.progress
+description: st.progress displays a progress bar.
 slug: /library/api-reference/status/st.progress
-description: st.progress 显示一个进度条。
+title: st.progress
 ---
 
 <Autofunction function="streamlit.progress" />
