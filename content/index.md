@@ -1,14 +1,15 @@
 ---
 title: 欢迎使用Streamlit
 features:
-  - title: 入门指南
+  - title:入门指南
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     color: violet-70
     icon: arrow_forward
     url: /library/get-started
     image: ""
   - title: API 参考
-    body: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+    body: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia.
     color: orange-70
     icon: dvr
     url: /library/api-reference
@@ -22,39 +23,44 @@ features:
       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
       sed quia.
     image: ""
-whats_new: 
+whats_new:
   - title: Feature title
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a
       facilisis sagittis, vitae nibh massa in facilisis et. Pretium eget non
       cursus purus tempus porta sodales.
     icon: visibility
-   url: /library/get-started
-   image: /img/logo.svg
-  - title: 功能标题
-   body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a facilisis sagittis, vitae nibh massa in facilisis et. Pretium eget non cursus purus tempus porta sodales.
-   url: /library/get-started
-   icon: visibility
-   image: ""
+    url: /library/get-started
+    image: /img/logo.svg
+  - title: Feature title
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a
+      facilisis sagittis, vitae nibh massa in facilisis et. Pretium eget non
+      cursus purus tempus porta sodales.
+    url: /library/get-started
+    icon: visibility
+    image: ""
   - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a
-      facilisis sagittis，vitae nibh massa in facilisis et。Pretium eget non cursus purus tempus porta sodales。
-  - title: 功能标题
+      facilisis sagittis, vitae nibh massa in facilisis et. Pretium eget non
+      cursus purus tempus porta sodales.
+    title: Feature title
     url: /library/get-started
     image: /img/logo.svg
     icon: edit
-  - title: 功能标题
-    body: Lorem ipsum dolor sit amet，consectetur adipiscing elit。Eleifend a facilisis sagittis，vitae nibh massa in facilisis et。Pretium eget non cursus purus tempus porta sodales。
+  - title: Feature title
+    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a
+      facilisis sagittis, vitae nibh massa in facilisis et. Pretium eget non
+      cursus purus tempus porta sodales.
     url: /library/get-started
     icon: edit
     image: ""
 news:
-  - publish_date: 2021年4月7日
-    title: 新故事1
+  - publish_date: April 7, 2021
+    title: New Story 1
     body:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis leo
       felis, quis egestas est dignissim vel.
     url: https://www.streamlit.io
-  - publish_date: 2021年4月7日
-    title: 新故事2
+  - publish_date: April 7, 2021
+    title: New Story 2
     body:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis leo
       felis, quis egestas est dignissim vel. Pellentesque interdum massa metus,
