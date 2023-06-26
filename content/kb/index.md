@@ -1,6 +1,7 @@
 ---
-标题：知识库
-链接：/knowledge-base
+title: 知识库
+slug: /knowledge-base
+---
 
 # 知识库
 
