@@ -30,12 +30,12 @@ whats_new:
     icon: visibility
    url: /library/get-started
    image: /img/logo.svg
- - title: 功能标题
+  - title: 功能标题
    body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a facilisis sagittis, vitae nibh massa in facilisis et. Pretium eget non cursus purus tempus porta sodales.
    url: /library/get-started
    icon: visibility
    image: ""
- - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a
+  - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a
       facilisis sagittis，vitae nibh massa in facilisis et。Pretium eget non cursus purus tempus porta sodales。
   - title: 功能标题
     url: /library/get-started
@@ -46,6 +46,7 @@ whats_new:
     url: /library/get-started
     icon: edit
     image: ""
+news:
   - publish_date: 2021年4月7日
     title: 新故事1
     body:
@@ -56,18 +57,18 @@ whats_new:
     title: 新故事2
     body:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis leo
-      felis, quis egestas est dignissim vel. Pellentesque interdum massa metus.
+      felis, quis egestas est dignissim vel. Pellentesque interdum massa metus,
       vitae tincidunt nibh molestie consequat. Sed congue commodo bibendum.
-Donec iaculis velit ante, a venenatis elit dictum ut. Etiam pellentesque
-libero ex, vitae eleifend quam egestas et. Vivamus pulvinar libero et
-iaculis placerat. Suspendisse bibendum orci a turpis suscipit dictum sed
-convallis risus. Aliquam eros erat, hendrerit vel viverra pretium,
-vulputate ac dui. Nullam vitae arcu ut enim tincidunt blandit. Donec
+      Donec iaculis velit ante, a venenatis elit dictum ut. Etiam pellentesque
+      libero ex, vitae eleifend quam egestas et. Vivamus pulvinar libero et
+      iaculis placerat. Suspendisse bibendum orci a turpis suscipit dictum sed
+      convallis risus. Aliquam eros erat, hendrerit vel viverra pretium,
+      vulputate ac dui. Nullam vitae arcu ut enim tincidunt blandit. Donec
       sapien mi, vulputate eu sagittis pellentesque, imperdiet elementum nisl.
-在dapibus quam id magna pretium finibus. Curabitur id nunc dolor.
-Pellentesque eu tellus vitae neque sollicitudin sodales. Integer arcu
-urna, rutrum vel arcu sit amet, aliquam lobortis est.
-url: https://www.streamlit.io
+      In dapibus quam id magna pretium finibus. Curabitur id nunc dolor.
+      Pellentesque eu tellus vitae neque sollicitudin sodales. Integer arcu
+      urna, rutrum vel arcu sit amet, aliquam lobortis est.
+    url: https://www.streamlit.io
 next: get-started
 ---
 
