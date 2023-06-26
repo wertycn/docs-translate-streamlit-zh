@@ -1,7 +1,7 @@
 ---
-title: st.success
+description: st.success displays a success message.
 slug: /library/api-reference/status/st.success
-description: st.success显示一个成功的消息。
+title: st.success
 ---
 
-<Autofunction function="streamlit.success" />
+`<Autofunction function="streamlit.success" />`

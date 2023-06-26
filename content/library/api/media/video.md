@@ -1,7 +1,7 @@
 ---
-title: st.video
+description: st.video displays a video player.
 slug: /library/api-reference/media/st.video
-description: st.video显示一个视频播放器。
+title: st.video
 ---
 
 <Autofunction function="streamlit.video" />

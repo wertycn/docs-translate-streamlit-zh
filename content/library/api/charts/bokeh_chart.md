@@ -1,7 +1,7 @@
 ---
-title: st.bokeh_chart
+description: st.bokeh_chart displays an interactive Bokeh chart.
 slug: /library/api-reference/charts/st.bokeh_chart
-description: st.bokeh_chart显示一个交互式的Bokeh图表。
+title: st.bokeh_chart
 ---
 
-<Autofunction function="streamlit.bokeh_chart" />
+`<Autofunction function="streamlit.bokeh_chart" />`

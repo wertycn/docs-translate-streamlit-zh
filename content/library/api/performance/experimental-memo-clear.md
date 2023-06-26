@@ -1,7 +1,7 @@
 ---
-title: st.experimental_memo.clear
+description: st.experimental_memo.clear clears all in-memory and on-disk memo caches.
 slug: /library/api-reference/performance/st.experimental_memo.clear
-description: st.experimental_memo.clear 清除所有内存和磁盘上的备忘录缓存。
+title: st.experimental_memo.clear
 ---
 
 <重要>
@@ -10,11 +10,11 @@ description: st.experimental_memo.clear 清除所有内存和磁盘上的备忘�
 
 </重要>
 
-<Autofunction function="streamlit.experimental_memo.clear" deprecated={true} deprecatedText="<code>st.experimental_memo.clear</code>在1.18.0版本中已被弃用。请使用<a href='/library/api-reference/performance/st.cache_data.clear'><code>st.cache_data.clear</code></a>代替。了解更多信息，请参阅<a href='/library/advanced-features/caching'>缓存</a>。"/>
+<Autofunction function="streamlit.experimental_memo.clear" deprecated={true} deprecatedText="<code>st.experimental_memo.clear</code>在1.18.0版本中已被弃用。请使用<a href='/library/api-reference/performance/st.cache_data.clear'><code>st.cache_data.clear</code></a>代替。在<a href='/library/advanced-features/caching'>Caching</a>中了解更多信息。"/>
 
 #### 示例
 
-在下面的示例中，按下"清除全部"按钮将清除所有使用`@st.experimental_memo`装饰的函数的记忆化值。
+在下面的示例中，按下"清除全部"按钮将会清除所有使用`@st.experimental_memo`装饰的函数的记忆值。
 
 ```python
 import streamlit as st

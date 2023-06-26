@@ -1,7 +1,7 @@
 ---
-标题：st.color_picker
-别名：/library/api-reference/widgets/st.color_picker
-描述：st.color_picker 显示一个颜色选择器小部件。
+description: st.color_picker displays a color picker widget.
+slug: /library/api-reference/widgets/st.color_picker
+title: st.color_picker
+---
 
 <Autofunction function="streamlit.color_picker" />
----

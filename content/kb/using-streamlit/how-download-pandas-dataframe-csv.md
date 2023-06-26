@@ -1,11 +1,11 @@
 ---
-title: 如何将 Pandas DataFrame 下载为 CSV 文件？
 slug: /knowledge-base/using-streamlit/how-download-pandas-dataframe-csv
+title: How to download a Pandas DataFrame as a CSV?
 ---
 
-# 如何将 Pandas DataFrame 下载为 CSV 文件？
+# 如何将Pandas DataFrame下载为CSV文件？
 
-使用内置于 Streamlit 的 [`st.download_button`](/library/api-reference/widgets/st.download_button) 小部件。查看一个[示例应用程序](https://streamlit-release-demos-0-88streamlit-app-0-88-v8ram3.streamlit.app/)，演示如何使用 `st.download_button` 下载常见文件格式。
+使用内置于Streamlit的[`st.download_button`](/library/api-reference/widgets/st.download_button)小部件。查看一个[示例应用程序](https://streamlit-release-demos-0-88streamlit-app-0-88-v8ram3.streamlit.app/)，演示了如何使用`st.download_button`下载常见文件格式。
 
 ## 示例用法
 

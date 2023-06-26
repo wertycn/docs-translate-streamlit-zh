@@ -1,7 +1,7 @@
 ---
-title: st.json
+description: st.json displays object or string as a pretty-printed JSON string.
 slug: /library/api-reference/data/st.json
-description: st.json将对象或字符串显示为格式化的JSON字符串。
+title: st.json
 ---
 
 <Autofunction function="streamlit.json" />

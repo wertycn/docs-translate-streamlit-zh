@@ -1,7 +1,7 @@
 ---
-title: st.set_page_config
+description: st.set_page_config configures the default settings of the page.
 slug: /library/api-reference/utilities/st.set_page_config
-description: st.set_page_config用于配置页面的默认设置。
+title: st.set_page_config
 ---
 
 <Autofunction function="streamlit.set_page_config" />

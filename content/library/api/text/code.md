@@ -1,9 +1,9 @@
 ---
-标题：st.code
-链接：/library/api-reference/text/st.code
-描述：st.code 用于显示一个带有可选语法高亮的代码块。
+description: st.code displays a code block with optional syntax highlighting.
+slug: /library/api-reference/text/st.code
+title: st.code
+---
 
 <Autofunction function="streamlit.code" />
 
-<Image src="/images/api.st.code.png" clean />
-
+<Image src="/images/api/st.code.png" clean />

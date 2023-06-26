@@ -1,12 +1,12 @@
 ---
-title: st.divider
+description: st.divider displays a horizontal rule in your app.
 slug: /library/api-reference/text/st.divider
-description: st.divider在您的应用中显示一个水平分隔线。
+title: st.divider
 ---
 
 <Autofunction function="streamlit.divider" />
 
-当您的应用中有多个元素时，它的效果如下所示:
+当应用程序中有多个元素时，它的效果如下所示:
 
 ```python
 import streamlit as st
@@ -22,4 +22,4 @@ st.write("This text is between the horizontal rules.")
 st.divider()  # 👈 Another horizontal rule
 ```
 
-<Image src="/images/api/st.divider.png" clean />
+![分割线](/images/api/st.divider.png)

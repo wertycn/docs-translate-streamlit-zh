@@ -1,15 +1,15 @@
 ---
-标题：st.slider
-链接：/library/api-reference/widgets/st.slider
-描述：st.slider 显示一个滑动条小部件。
+description: st.slider displays a slider widget.
+slug: /library/api-reference/widgets/st.slider
+title: st.slider
+---
 
 <Autofunction function="streamlit.slider" />
 
-### 特色视频
+### 精选视频
 
-请观看我们关于如何使用 Streamlit 的核心功能之一——滑动条的视频！
+看看我们关于如何使用Streamlit的核心功能之一——滑块的视频！
 <YouTube videoId="tzAdd-MuWPw" />
 
-在下面的视频中，我们将进一步展示如何制作一个双向滑动条。
+在下面的视频中，我们将进一步介绍如何制作一个双向滑块。
 <YouTube videoId="sCvdt79asrE" />
----

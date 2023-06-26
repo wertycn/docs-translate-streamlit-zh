@@ -1,7 +1,7 @@
 ---
-标题: st.balloons
-网址: /library/api-reference/status/st.balloons
-描述: st.balloons 显示庆祝气球！
+description: st.balloons displays celebratory balloons!
+slug: /library/api-reference/status/st.balloons
+title: st.balloons
+---
 
 <Autofunction function="streamlit.balloons" />
----

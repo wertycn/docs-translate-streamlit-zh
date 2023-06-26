@@ -1,14 +1,14 @@
 ---
-title: st.text_input
+description: st.text_input displays a single-line text input widget.
 slug: /library/api-reference/widgets/st.text_input
-description: st.text_input显示一个单行文本输入小部件。
+title: st.text_input
 ---
 
 <Autofunction function="streamlit.text_input" />
 
 <br />
 
-文本输入小部件可以使用`label_visibility`参数自定义如何隐藏它们的标签。如果设置为"hidden"，标签将不会显示，但在小部件上方仍然有空白空间（相当于`label=""`）。如果设置为"collapsed"，标签和空白空间都将被移除。默认值为"visible"。文本输入小部件还可以使用`disabled`参数禁用，并使用`placeholder`参数在文本输入为空时显示可选的占位文本：
+文本输入小部件可以使用`label_visibility`参数自定义标签的隐藏方式。如果设置为“hidden”，标签将不会显示，但在小部件上方仍然会保留空白空间（相当于`label=""`）。如果设置为“collapsed”，则标签和空白空间都将被移除。默认值为“visible”。文本输入小部件还可以使用`disabled`参数禁用，并可以使用`placeholder`参数在文本输入为空时显示可选的占位文本。
 
 ```python
 import streamlit as st

@@ -1,20 +1,20 @@
 ---
-title: 输入控件
 slug: /library/api-reference/widgets
+title: Input widgets
 ---
 
-# 输入控件
+# 输入小部件
 
-使用控件，Streamlit 允许您在应用程序中直接添加按钮、滑块、文本输入框等交互功能。
+使用小部件，Streamlit允许您在应用程序中直接添加按钮、滑块、文本输入框等交互功能。
 
 <TileContainer>
 <RefCard href="/library/api-reference/widgets/st.button">
 
-<Image pure alt="截图" src="/images/api/button.jpg" />
+<Image pure alt="screenshot" src="/images/api/button.jpg" />
 
 #### 按钮
 
-显示一个按钮控件。
+显示一个按钮小部件。
 
 ```python
 clicked = st.button("Click me")
@@ -63,11 +63,11 @@ choice = st.radio("Pick one", ["cats", "dogs"])
 </RefCard>
 <RefCard href="/library/api-reference/widgets/st.selectbox">
 
-<Image pure alt="截图" src="/images/api/selectbox.jpg" />
+<Image pure alt="screenshot" src="/images/api/selectbox.jpg" />
 
-#### Selectbox
+#### 选择框
 
-显示一个选择框小部件。
+显示一个选择小部件。
 
 ```python
 choice = st.selectbox("Pick one", ["cats", "dogs"])
@@ -78,9 +78,9 @@ choice = st.selectbox("Pick one", ["cats", "dogs"])
 
 <Image pure alt="screenshot" src="/images/api/multiselect.jpg" />
 
-#### 多选框
+#### 多选
 
-显示一个多选框部件。多选框部件最初为空。
+显示一个多选小部件。多选小部件初始为空。
 
 ```python
 choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
@@ -91,9 +91,9 @@ choices = st.multiselect("Buy", ["milk", "apples", "potatoes"])
 
 <Image pure alt="screenshot" src="/images/api/slider.jpg" />
 
-#### 滑块
+#### 滑动条
 
-显示一个滑块小部件。
+显示一个滑动条小部件。
 
 ```python
 number = st.slider("Pick a number", 0, 100)
@@ -128,7 +128,7 @@ name = st.text_input("First name")
 </RefCard>
 <RefCard href="/library/api-reference/widgets/st.number_input">
 
-<Image pure alt="截图" src="/images/api/number_input.jpg" />
+<Image pure alt="screenshot" src="/images/api/number_input.jpg" />
 
 #### 数字输入
 
@@ -193,11 +193,11 @@ data = st.file_uploader("Upload a CSV")
 </RefCard>
 <RefCard href="/library/api-reference/widgets/st.camera_input">
 
-<Image pure alt="截图" src="/images/api/camera_input.jpg" />
+<Image pure alt="screenshot" src="/images/api/camera_input.jpg" />
 
-#### 相机输入
+#### 摄像头输入
 
-显示一个小部件，允许用户直接从相机上传图片。
+显示一个小部件，允许用户直接从摄像头上传图片。
 
 ```python
 image = st.camera_input("Take a picture")
@@ -227,7 +227,7 @@ color = st.color_picker("Pick a color")
 
 #### Streamlit Elements
 
-在Streamlit中创建一个可拖动和可调整大小的仪表板。由[@okls](https://github.com/okls)创建。
+在Streamlit中创建一个可拖动和可调整大小的仪表盘。由[@okls](https://github.com/okls)创建。
 
 ```python
 from streamlit_elements import elements, mui, html
@@ -244,7 +244,7 @@ with elements("new_element"):
 
 #### 标签
 
-为您的Streamlit应用程序添加标签。由[@gagan3012](https://github.com/gagan3012)创建。
+为您的Streamlit应用添加标签。由[@gagan3012](https://github.com/gagan3012)创建。
 
 ```python
 from streamlit_tags import st_tags
@@ -261,7 +261,7 @@ suggestions=['five', 'six', 'seven', 'eight', 'nine', 'three', 'eleven', 'ten', 
 
 #### Stqdm
 
-在Streamlit应用中处理进度条的最简单方法。由[@Wirg](https://github.com/Wirg)创建。
+在Streamlit应用程序中处理进度条的最简单方法。由[@Wirg](https://github.com/Wirg)创建。
 
 ```python
 from stqdm import stqdm
@@ -274,7 +274,7 @@ for _ in stqdm(range(50)):
 
 <ComponentCard href="https://github.com/innerdoc/streamlit-timeline">
 
-<Image pure alt="screenshot" src="/images/api/components/timeline.jpg" />
+<Image pure alt="截图" src="/images/api/components/timeline.jpg" />
 
 #### 时间线
 
@@ -293,9 +293,9 @@ with open('example.json', "r") as f:
 
 <Image pure alt="screenshot" src="/images/api/components/camera-live.jpg" />
 
-#### 实时摄像头输入
+#### 实时相机输入
 
-st.camera_input的替代方案，可以实时返回摄像头图像。由[@blackary](https://github.com/blackary)创建。
+st.camera_input的替代品，以实时方式返回网络摄像头图像。由[@blackary](https://github.com/blackary)创建。
 
 ```python
 from camera_input_live import camera_input_live
@@ -327,9 +327,9 @@ content
 
 <Image pure alt="screenshot" src="/images/api/components/chat.jpg" />
 
-#### Streamlit聊天
+#### Streamlit 聊天界面
 
-Streamlit聊天组件，用于构建聊天机器人的用户界面。由[@AI-Yash](https://github.com/AI-Yash)创建。
+Streamlit的聊天界面组件。由[@AI-Yash](https://github.com/AI-Yash)创建。
 
 ```python
 from streamlit_chat import message
@@ -346,7 +346,7 @@ message("Hello bot!", is_user=True)  # align's the message to the right
 
 #### Streamlit选项菜单
 
-从菜单中的选项列表中选择一个项目。由[@victoryhb](https://github.com/victoryhb)创建。
+从菜单中的选项列表中选择单个项目。由[@victoryhb](https://github.com/victoryhb)创建。
 
 ```python
 from streamlit_option_menu import option_menu

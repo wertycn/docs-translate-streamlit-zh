@@ -1,7 +1,7 @@
 ---
-title: st.snow
+description: st.snow displays celebratory snowflakes!
 slug: /library/api-reference/status/st.snow
-description: st.snow显示庆祝的雪花！
+title: st.snow
 ---
 
 <Autofunction function="streamlit.snow" />

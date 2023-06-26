@@ -1,7 +1,7 @@
 ---
-title: st.warning
+description: st.warning displays warning message.
 slug: /library/api-reference/status/st.warning
-description: st.warning显示警告消息。
+title: st.warning
 ---
 
-<Autofunction function="streamlit.warning" />
+`<Autofunction function="streamlit.warning" />`

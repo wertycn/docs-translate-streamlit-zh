@@ -1,7 +1,7 @@
 ---
-title: st.empty
+description: st.empty inserts a single-element container.
 slug: /library/api-reference/layout/st.empty
-description: st.empty插入一个单元素容器。
+title: st.empty
 ---
 
-<Autofunction function="streamlit.empty" />
+`<Autofunction function="streamlit.empty" />`

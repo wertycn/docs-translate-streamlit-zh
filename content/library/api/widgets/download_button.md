@@ -1,6 +1,7 @@
 ---
-标题: st.download_button
-别名: /library/api-reference/widgets/st.download_button
-描述: st.download_button 显示一个下载按钮小部件。
+description: st.download_button displays a download button widget.
+slug: /library/api-reference/widgets/st.download_button
+title: st.download_button
+---
 
-<<Autofunction function="streamlit.download_button" />
+`<Autofunction function="streamlit.download_button" />`

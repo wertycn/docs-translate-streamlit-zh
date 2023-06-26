@@ -1,7 +1,7 @@
 ---
-title: st.stop
+description: st.stop stops the execution immediately.
 slug: /library/api-reference/control-flow/st.stop
-description: st.stop立即停止执行。
+title: st.stop
 ---
 
 <Autofunction function="streamlit.stop" />

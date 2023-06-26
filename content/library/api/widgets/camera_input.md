@@ -1,12 +1,12 @@
 ---
-标题: st.camera_input
-别名: /library/api-reference/widgets/st.camera_input
-描述: st.camera_input显示一个用于从摄像头上传图像的小部件
+description: st.camera_input displays a widget to upload images from a camera
+slug: /library/api-reference/widgets/st.camera_input
+title: st.camera_input
 ---
 
 <Autofunction function="streamlit.camera_input" />
 
-要将图像文件缓冲区作为字节读取，可以在`UploadedFile`对象上使用`getvalue()`方法。
+要将图像文件缓冲区作为字节读取，您可以在`UploadedFile`对象上使用`getvalue()`方法。
 
 ```python
 import streamlit as st
@@ -23,21 +23,21 @@ if img_file_buffer is not None:
 
 <重要>
 
-`st.camera_input` 返回一个 `UploadedFile` 类的对象，它是 `BytesIO` 的子类。因此它是一个"类似文件"的对象。这意味着您可以将它传递到任何需要文件的地方，类似于 `st.file_uploader`。
+`st.camera_input` 返回一个 `UploadedFile` 类的对象，它是 `BytesIO` 的子类。因此它是一个“类文件”的对象。这意味着您可以将它传递到任何需要文件的地方，类似于 `st.file_uploader`。
 
 </重要>
 
 ## 图像处理示例
 
-您可以使用`st.camera_input`的输出进行各种下游任务，包括图像处理。下面，我们将演示如何在流行的图像和数据处理库（如[Pillow](https://pillow.readthedocs.io/en/stable/installation.html)、[NumPy](https://numpy.org/)、[OpenCV](https://pypi.org/project/opencv-python-headless/)、[TensorFlow](https://www.tensorflow.org/)、[torchvision](https://pytorch.org/vision/stable/index.html)和[PyTorch](https://pytorch.org/)）中使用`st.camera_input`小部件。
+您可以使用`st.camera_input`的输出进行各种下游任务，包括图像处理。下面，我们将演示如何在流行的图像和数据处理库中使用`st.camera_input`小部件，如[Pillow](https://pillow.readthedocs.io/en/stable/installation.html)，[NumPy](https://numpy.org/)，[OpenCV](https://pypi.org/project/opencv-python-headless/)，[TensorFlow](https://www.tensorflow.org/)，[torchvision](https://pytorch.org/vision/stable/index.html)和[PyTorch](https://pytorch.org/)。
 
-虽然我们为最常见的用例和库提供了示例，但您可以根据自己的需求和喜好的库进行调整。
+虽然我们提供了最常见的用例和库的示例，但您可以根据自己的需求和喜好的库进行调整。
 
 ### Pillow (PIL) 和 NumPy
 
 确保您已经安装了 [Pillow](https://pillow.readthedocs.io/en/stable/installation.html) 和 [NumPy](https://numpy.org/)。
 
-要将图像文件缓冲区读取为 PIL 图像并将其转换为 NumPy 数组:
+要将图像文件缓冲区读取为 PIL Image 并将其转换为 NumPy 数组，请执行以下操作：
 
 ```python
 import streamlit as st
@@ -62,11 +62,11 @@ if img_file_buffer is not None:
     st.write(img_array.shape)
 ```
 
-### OpenCV（cv2）
+### OpenCV (cv2)
 
-请确保您已安装[OpenCV](https://pypi.org/project/opencv-python-headless/)和[NumPy](https://numpy.org/)。
+请确保您已经安装了[OpenCV](https://pypi.org/project/opencv-python-headless/)和[NumPy](https://numpy.org/)。
 
-使用OpenCV读取图像文件缓冲区的方法：
+使用OpenCV读取图像文件缓冲区的方法如下：
 
 ```python
 import streamlit as st
@@ -91,9 +91,9 @@ if img_file_buffer is not None:
 
 ### TensorFlow
 
-请确保您已安装[TensorFlow](https://www.tensorflow.org/install/)。
+确保您已经安装了[TensorFlow](https://www.tensorflow.org/install/)。
 
-要使用TensorFlow将图像文件缓冲区读取为一个三维的uint8张量：
+使用TensorFlow将图像文件缓冲区读取为一个三维的uint8张量：
 
 ```python
 import streamlit as st
@@ -117,9 +117,9 @@ if img_file_buffer is not None:
 
 ### Torchvision
 
-确保您已经安装了[Torchvision](https://pypi.org/project/torchvision/)（它不随PyTorch捆绑）和[PyTorch](https://pytorch.org/)。
+请确保您已经安装了[Torchvision](https://pypi.org/project/torchvision/)（它不随PyTorch捆绑）和[PyTorch](https://pytorch.org/)。
 
-要使用`torchvision.io`将图像文件缓冲区读取为一个3维的uint8张量：
+要使用`torchvision.io`将图像文件缓冲区读取为3维uint8张量：
 
 ```python
 import streamlit as st
@@ -146,9 +146,9 @@ if img_file_buffer is not None:
 
 ### PyTorch
 
-请确保您已经安装了[PyTorch](https://pytorch.org/)和[NumPy](https://numpy.org/)。
+请确保您已经安装了 [PyTorch](https://pytorch.org/) 和 [NumPy](https://numpy.org/)。
 
-使用PyTorch将图像文件缓冲区读取为一个3维的uint8张量：
+使用PyTorch将图像文件缓冲区读取为一个3维的uint8张量:
 
 ```python
 import streamlit as st

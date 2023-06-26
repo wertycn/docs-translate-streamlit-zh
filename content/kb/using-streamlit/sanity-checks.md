@@ -1,22 +1,23 @@
 ---
-title：健全性检查
-slug：/knowledge-base/using-streamlit/sanity-checks
+slug: /knowledge-base/using-streamlit/sanity-checks
+title: Sanity checks
 ---
 
 # 健全性检查
 
-如果您在运行Streamlit应用时遇到问题，请尝试以下几个方法。
+如果您在运行Streamlit应用程序时遇到问题，请尝试以下几个步骤。
 
-## 检查＃0：您是否正在使用Streamlit支持的Python版本？
+## 检查 #0: 您是否使用Streamlit支持的Python版本？
 
-Streamlit将在实际可行的情况下与较早的Python版本保持向后兼容性，
-保证与至少最近的三个Python 3次要版本兼容。
+Streamlit将尽可能与较早的Python版本保持向后兼容，
+并保证与最近的三个Python 3小版本至少兼容。
 
-随着Python的新版本发布，我们将尽快与新版本兼容，尽管我们经常受到其他Python包的支持来支持这些新版本。
+随着新版本的Python发布，我们将尽快与新版本保持兼容。
+尽可能地支持最新的Python版本，尽管我们经常受制于其他Python包对这些新版本的支持。
 
-Streamlit目前支持Python的版本3.7、3.8、3.9、3.10和3.11。
+Streamlit目前支持Python的3.7、3.8、3.9、3.10和3.11版本。
 
-## 检查1：Streamlit是否正在运行？
+## 检查 #1: Streamlit是否正在运行？
 
 在Mac或Linux机器上，在终端上输入以下命令：
 
@@ -24,13 +25,11 @@ Streamlit目前支持Python的版本3.7、3.8、3.9、3.10和3.11。
 ps -Al | grep streamlit
 ```
 
-如果在输出中看不到 `streamlit run`（或者如果您运行的是 `streamlit hello`），
-则表示 Streamlit 服务器未运行。因此，请重新运行命令并查看错误是否消失。
+如果在输出中没有看到`streamlit run`（或者如果您运行的命令是`streamlit hello`）则表示Streamlit服务器未运行。因此，请重新运行您的命令，看看问题是否消失。
 
 ## 检查 #2: 这是一个已经修复的 Streamlit bug 吗？
 
-我们会尽快修复 bug，所以很多时候问题会在您升级 Streamlit 到最新版本后解决。
-因此，当遇到问题时，请尝试升级到最新版本的 Streamlit：
+我们通常会快速修复 bug，所以很多情况下问题会在您升级 Streamlit 后消失。因此，当遇到问题时，请尝试升级到最新版本的 Streamlit。
 
 ```bash
 pip install --upgrade streamlit
@@ -39,32 +38,32 @@ streamlit version
 
 ...然后验证打印的版本号是否与[PyPI](https://pypi.org/project/streamlit/)上显示的版本号相对应。
 
-**现在尝试复现问题。** 如果问题没有解决，请继续阅读。
+**现在尝试重新复现问题。** 如果问题没有解决，请继续阅读。
 
-## 检查 #3: 是否正在运行正确的 Streamlit 二进制文件?
+## 检查 #3: 是否运行了正确的 Streamlit 二进制文件？
 
-让我们检查一下您的Python环境是否设置正确。编辑您遇到问题的Streamlit脚本，**将所有内容注释掉，并添加以下这些行:**
+让我们检查一下您的 Python 环境是否设置正确。编辑您遇到问题的 Streamlit 脚本，**将所有内容注释掉，并添加以下这些行：**
 
 ```python
 import streamlit as st
 st.write(st.__version__)
 ```
 
-...然后在您的脚本上调用`streamlit run`，并确保它与上面的版本相同。如果版本不同，请查看[这些说明](/library/get-started/installation)以了解一些设置环境的绝对方法。
+...然后在你的脚本上调用`streamlit run`，并确保它与上面的版本相同。如果版本不同，请查看[这些说明](/library/get-started/installation)以确定一些确保设置您的环境的方法。
 
-## 检查 #4: 您的浏览器是否过于积极地缓存您的应用程序？
+## 检查 #4: 你的浏览器是否过于缓存应用程序？
 
-有两种简单的方法来检查：
+有两种简单的方法来检查这个问题：
 
-1. 在浏览器中加载您的应用程序，然后按下`Ctrl-Shift-R`或`⌘-Shift-R`进行硬刷新（Chrome/Firefox）。
+1. 在浏览器中加载你的应用程序，然后按下 `Ctrl-Shift-R` 或 `⌘-Shift-R` 进行强制刷新（Chrome/Firefox）。
 
-2. 作为测试，可以在另一个端口上运行Streamlit。这样，浏览器会以全新的缓存启动页面。为此，在命令行上向Streamlit传递`--server.port`参数：
+2. 作为一个测试，将Streamlit运行在另一个端口上。这样浏览器就会以全新的缓存启动页面。为此，在命令行中给Streamlit传递`--server.port`参数：
 
-   ```bash
-   streamlit run my_app.py --server.port=9876
-   ```
+```bash
+streamlit run my_app.py --server.port=9876
+```
 
-## 检查 #5：这是Streamlit的回归问题吗？
+## 检查 #5: 这是否是Streamlit的回归问题？
 
 如果您已经升级到最新版本的Streamlit，但是出现了问题，您可以随时使用以下命令降级：
 
@@ -72,13 +71,13 @@ st.write(st.__version__)
 pip install --upgrade streamlit==1.0.0
 ```
 
-...其中 `1.0.0` 是您想要降级到的版本。请参阅[变更日志](/library/changelog)以获取完整的Streamlit版本列表。
+...其中 `1.0.0` 是您希望降级的版本。请参阅[Changelog](/library/changelog)获取完整的Streamlit版本列表。
 
-## 检查 #6 [Windows]: Python是否已添加到您的PATH环境变量中？
+## 检查 #6 [Windows]: Python是否已添加到系统PATH中？
 
 当通过从[python.org](https://www.python.org/downloads/)下载安装Python时，Python不会自动添加到[Windows系统的PATH](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access)中。因此，您可能会收到以下错误消息：
 
-命令提示符:
+命令提示符：
 
 ```bash
 C:\Users\streamlit> streamlit hello
@@ -99,13 +98,13 @@ At line:1 char:1
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
 
-要解决此问题，请将[Python添加到Windows系统的PATH](https://datatofish.com/add-python-to-windows-path/)中。
+要解决此问题，请将 [Python 添加到 Windows 系统路径](https://datatofish.com/add-python-to-windows-path/)。
 
-在将Python添加到Windows的PATH后，您应该能够按照我们的[入门指南](/library/get-started)中的说明进行操作。
+在将 Python 添加到 Windows 路径后，您应该能够按照我们的 [入门指南](/library/get-started) 部分中的说明进行操作。
 
-## 检查 #7 [Windows]：您是否需要安装Visual Studio的构建工具？
+## 检查 #7 [Windows]: 是否需要安装 Visual Studio 的构建工具？
 
-Streamlit将[pyarrow](https://arrow.apache.org/docs/python/)作为安装依赖项。偶尔，在尝试从PyPI安装Streamlit时，您可能会遇到以下错误：
+Streamlit在安装时包含了[pyarrow](https://arrow.apache.org/docs/python/)作为一个依赖项。偶尔，在尝试从PyPI安装Streamlit时，您可能会遇到以下错误：
 
 ```bash
 Using cached pyarrow-1.0.1.tar.gz (1.3 MB)
@@ -160,6 +159,6 @@ Using cached pyarrow-1.0.1.tar.gz (1.3 MB)
   ----------------------------------------
 ```
 
-这个错误表示在安装过程中，Python试图编译某些库，但是在您的系统上找不到适当的编译器，如 `error: 需要 Microsoft Visual C++ 14.0。使用“Visual Studio的构建工具”获取它。`
+这个错误表示Python在安装过程中尝试编译某些库，但是在您的系统上找不到合适的编译器，这可以通过错误信息中的`error: Microsoft Visual C++ 14.0 is required. Get it with "Build Tools for Visual Studio"`这一行反映出来。
 
 安装[Visual Studio的构建工具](https://visualstudio.microsoft.com/downloads/)应该可以解决这个问题。

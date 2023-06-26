@@ -1,27 +1,27 @@
 ---
-title: 为应用程序添加状态
 slug: /library/advanced-features/session-state
+title: Add statefulness to apps
 ---
 
-# 为应用程序添加状态
+# 为应用程序添加状态性
 
 ## 什么是状态？
 
-我们将在浏览器标签中访问Streamlit应用程序称为**会话**。对于每个连接到Streamlit服务器的浏览器标签，都会创建一个新的会话。每当您与应用程序进行交互时，Streamlit会从头到尾重新运行您的脚本。每次重新运行都在一个空白的状态下进行：在运行之间没有共享变量。
+我们将在浏览器标签中访问Streamlit应用程序定义为一个**会话**。对于连接到Streamlit服务器的每个浏览器标签，都会创建一个新的会话。每当与应用程序进行交互时，Streamlit会从头到尾重新运行您的脚本。每次重新运行都会在一个空白状态下进行：没有变量在运行之间共享。
 
-会话状态是一种在每个用户会话中共享变量的方式。除了存储和持久化状态的能力外，Streamlit还提供了使用回调函数来操作状态的能力。会话状态还可以在[multipage app](/library/get-started/multipage-apps)中的应用之间进行持久化。
+会话状态是一种在每个用户会话中共享变量的方式。除了能够存储和持久化状态外，Streamlit还提供了使用回调函数来操作状态的能力。会话状态还会在多页应用程序中持久化，可以跨应用进行共享。
 
-在本指南中，我们将演示如何使用**会话状态**和**回调函数**来构建一个具有状态的计数器应用程序。
+在本指南中，我们将演示如何使用**会话状态**和**回调函数**来构建一个有状态的计数器应用程序。
 
-有关会话状态和回调 API 的详细信息，请参阅我们的 [会话状态 API 参考指南](/library/api-reference/session-state)。
+有关Session State和Callbacks API的详细信息，请参阅我们的[Session State API参考指南](/library/api-reference/session-state)。
 
-此外，您还可以观看 Streamlit 开发者倡导者 Dr. Marisa Smith 的这个会话状态基础教程视频，以便入门：
+此外，查看Streamlit开发者大使Dr. Marisa Smith的Session State基础教程视频，以开始使用：
 
 <YouTube videoId="92jUAXBmZyU" />
 
 ## 构建一个计数器
 
-让我们将脚本命名为 `counter.py`。它初始化了一个 `count` 变量，并且有一个按钮来增加存储在 `count` 变量中的值：
+让我们将脚本命名为`counter.py`。它初始化一个`count`变量，并有一个按钮来递增存储在`count`变量中的值：
 
 ```python
 import streamlit as st
@@ -36,18 +36,18 @@ if increment:
 st.write('Count = ', count)
 ```
 
-无论我们在上面的应用程序中按下**_增加_**按钮多少次，`count`始终保持为1。让我们了解一下原因：
+无论我们在上述应用程序中按下多少次“增加”按钮，`count`始终保持为1。让我们理解为什么：
 
-- 每次按下**_增加_**按钮时，Streamlit会从上到下重新运行`counter.py`，并且每次运行时，`count`都会被初始化为`0`。
-- 连续按下**_增加_**按钮将1加到0上，因此无论我们按下**_增加_**按钮多少次，`count`都为1。
+- 每当我们按下“增加”按钮时，Streamlit会从上到下重新运行`counter.py`，并且每次运行时，`count`都会被初始化为`0`。
+- 连续按下“增加”后，将1添加到0，因此无论我们按下多少次“增加”，`count`都等于1。
 
-正如我们将在后面看到的那样，我们可以通过将`count`存储为会话状态变量来避免这个问题。通过这样做，我们告诉Streamlit应该在应用程序重新运行时维护存储在会话状态变量中的值。
+正如我们稍后将看到的那样，我们可以通过将`count`存储为Session State变量来避免此问题。通过这样做，我们告诉Streamlit应该在应用程序重新运行时保持存储在Session State变量中的值不变。
 
-让我们更多地了解使用会话状态的API。
+让我们更深入地了解如何使用Session State的API。
 
 ### 初始化
 
-会话状态API遵循基于字段的API，非常类似于Python字典：
+Session State API遵循基于字段的API，这与Python字典非常相似：
 
 ```python
 import streamlit as st
@@ -64,7 +64,7 @@ if 'key' not in st.session_state:
 
 ### 读取和更新
 
-通过将项目传递给 `st.write` 来读取会话状态中的项目的值:
+通过将要读取的项目传递给 `st.write` ，可以读取Session State中的项目的值：
 
 ```python
 import streamlit as st
@@ -103,11 +103,11 @@ st.write(st.session_state['value'])
 
 ![state-uninitialized-exception](/images/state_uninitialized_exception.png)
 
-现在让我们来看一些示例，演示如何为我们的计数器应用程序添加会话状态。
+现在让我们看一些示例，说明如何将会话状态添加到我们的计数器应用程序中。
 
 ### 示例1：添加会话状态
 
-既然我们已经了解了会话状态API的用法，让我们更新我们的计数器应用程序，使用会话状态：
+既然我们已经掌握了会话状态API，让我们更新我们的计数器应用程序以使用会话状态：
 
 ```python
 import streamlit as st
@@ -127,9 +127,9 @@ st.write('Count = ', st.session_state.count)
 
 ### 示例2：会话状态和回调
 
-现在我们已经使用会话状态构建了一个基本的计数器应用程序，让我们进一步学习一些更复杂的内容。下一个示例将使用会话状态和回调函数。
+现在，我们已经使用会话状态构建了一个基本的计数器应用程序，让我们继续进行一些更复杂的操作。下一个示例使用了带有会话状态的回调函数。
 
-**回调函数**：回调函数是一个在输入小部件发生更改时调用的Python函数。可以使用`on_change`（或`on_click`）、`args`和`kwargs`参数与小部件一起使用回调函数。完整的回调函数API可以在我们的[会话状态API参考指南](/library/api-reference/session-state#use-callbacks-to-update-session-state)中找到。
+**回调函数**：回调函数是一个在输入小部件发生变化时被调用的Python函数。可以使用`on_change`（或`on_click`）、`args`和`kwargs`参数与小部件一起使用回调函数。完整的回调函数 API 可在我们的[会话状态 API 参考指南](/library/api-reference/session-state#use-callbacks-to-update-session-state)中找到。
 
 ```python
 import streamlit as st
@@ -146,11 +146,11 @@ st.button('Increment', on_click=increment_counter)
 st.write('Count = ', st.session_state.count)
 ```
 
-现在，按下**_增加_**按钮会通过调用`increment_counter()`函数来更新计数。
+现在，按下 **_Increment_** 按钮会通过调用 `increment_counter()` 函数来每次更新计数。
 
-### 示例3：在回调中使用args和kwargs
+### 示例3：在回调函数中使用args和kwargs
 
-回调还支持使用`args`参数在小部件中传递参数：
+回调函数还支持使用 `args` 参数在小部件中传递参数:
 
 ```python
 import streamlit as st
@@ -170,7 +170,7 @@ increment = st.button('Increment', on_click=increment_counter,
 st.write('Count = ', st.session_state.count)
 ```
 
-此外，我们还可以在小部件中使用`kwargs`参数来将命名参数传递给回调函数，示例如下：
+另外，我们还可以在小部件中使用`kwargs`参数，将命名参数传递给回调函数，如下所示：
 
 ```python
 import streamlit as st
@@ -194,9 +194,9 @@ st.button('Decrement', on_click=decrement_counter,
 st.write('Count = ', st.session_state.count)
 ```
 
-### 示例 4: 表单和回调
+### 示例 4：表单和回调函数
 
-假设我们现在不仅想要增加`count`，而且还想要记录它上次更新的时间。我们将使用回调和`st.form`来实现这一点:
+假设我们不仅想递增`count`，还想记录它的最后更新时间。我们可以使用回调函数和`st.form`来实现这个功能：
 
 ```python
 import streamlit as st
@@ -222,13 +222,13 @@ st.write('Last Updated = ', st.session_state.last_updated)
 
 ## 高级概念
 
-### 会话状态和小部件状态的关联
+### 会话状态与小部件状态的关联
 
-会话状态提供了在重新运行时跨变量进行存储的功能。小部件状态（即小部件的值）也存储在会话中。
+会话状态提供了在重新运行时跨变量存储的功能。小部件状态（即小部件的值）也存储在会话中。
 
-为了简化操作，我们将这些信息_统一_在一个地方，即会话状态。这个便利功能使得在应用程序的任何代码中都可以非常轻松地读取或写入小部件的状态。会话状态变量使用`key`参数与小部件的值相对应。
+为了简化起见，我们将此信息统一放在一个地方，即会话状态。这个便利的功能使得在应用程序的任何代码中读取或写入小部件的状态变得非常容易。会话状态变量通过 `key` 参数来映射小部件的值。
 
-我们通过以下示例来说明这一点。假设我们有一个应用程序，其中有一个滑块来表示摄氏温度。我们可以使用会话状态API来**设置**和**获取**温度小部件的值，如下所示：
+我们以以下示例来说明。假设我们有一个应用程序，其中有一个滑块来表示摄氏温度。我们可以使用会话状态API来**设置**和**获取**温度小部件的值，如下所示：
 
 ```python
 import streamlit as st
@@ -248,15 +248,15 @@ st.slider(
 st.write(st.session_state.celsius)
 ```
 
-使用 Session State API 设置小部件值存在限制。
+使用Session State API设置小部件值存在限制。
 
-<Important>
+<重要提示>
 
-Streamlit **不允许**通过 Session State API 为 `st.button` 和 `st.file_uploader` 设置小部件值。
+Streamlit **不允许**通过Session State API为`st.button`和`st.file_uploader`设置小部件值。
 
-</Important>
+</重要提示>
 
-尝试通过 Session State API 设置 `st.button` 状态的以下示例将引发 `StreamlitAPIException` 异常：
+尝试通过Session State API设置`st.button`状态的以下示例将引发`StreamlitAPIException`异常：
 
 ```python
 import streamlit as st
@@ -272,11 +272,11 @@ st.button('Submit', key='my_button')
 
 ### 可序列化的会话状态
 
-序列化是指将对象或数据结构转换为可持久化和共享的格式，并允许您恢复数据的原始结构的过程。Python内置的[pickle](https://docs.python.org/3/library/pickle.html)模块可以将Python对象序列化为字节流（"pickling"），并将流反序列化为对象（"unpickling"）。
+序列化是指将对象或数据结构转换为可以持久化和共享的格式，并允许您恢复数据的原始结构。Python内置的[pickle](https://docs.python.org/3/library/pickle.html)模块可以将Python对象序列化为字节流（"pickling"），并将流反序列化为对象（"unpickling"）。
 
-默认情况下，Streamlit的[会话状态](/library/advanced-features/session-state)允许您在会话期间持久化任何Python对象，无论对象的pickle序列化能力如何。这个属性允许您存储Python的原始数据类型，如整数、浮点数、复数和布尔值，数据帧，甚至由函数返回的[lambdas](https://docs.python.org/3/reference/expressions.html#lambda)。然而，一些执行环境可能要求序列化会话状态中的所有数据，因此在开发过程中检测不兼容性或在将来停止支持它的执行环境中可能会很有用。
+默认情况下，Streamlit的[会话状态](/library/advanced-features/session-state)允许您在会话期间持久保存任何Python对象，无论对象是否可被pickle序列化。这个特性允许您存储Python的原始类型，如整数、浮点数、复数和布尔值，数据帧，甚至由函数返回的[lambdas](https://docs.python.org/3/reference/expressions.html#lambda)。然而，一些执行环境可能需要序列化会话状态中的所有数据，因此在开发过程中或将来执行环境停止支持时检测到不兼容性可能是有用的。
 
-为此，Streamlit提供了一个`runner.enforceSerializableSessionState` [配置选项](https://docs.streamlit.io/library/advanced-features/configuration)，当设置为`true`时，只允许在Session State中使用可pickle序列化的对象。要启用此选项，可以创建一个全局或项目配置文件，包含以下内容，或将其用作命令行标志:
+为此，Streamlit提供了一个`runner.enforceSerializableSessionState` [配置选项](https://docs.streamlit.io/library/advanced-features/configuration)，当设置为`true`时，只允许在Session State中使用可pickle序列化的对象。要启用此选项，可以创建一个全局或项目配置文件，并使用以下内容，或将其用作命令行标志:
 
 ```toml
 # .streamlit/config.toml
@@ -284,7 +284,7 @@ st.button('Submit', key='my_button')
 enforceSerializableSessionState = true
 ```
 
-通过"_pickle-serializable_"，我们指的是调用`pickle.dumps(obj)`不应该引发[`PicklingError`](https://docs.python.org/3/library/pickle.html#pickle.PicklingError)异常。当启用配置选项时，将不可序列化的数据添加到会话状态应该会引发异常。例如，
+"_pickle-serializable_" 指的是调用 `pickle.dumps(obj)` 不应该引发 [`PicklingError`](https://docs.python.org/3/library/pickle.html#pickle.PicklingError) 异常。当启用配置选项时，将不可序列化的数据添加到会话状态中应该引发异常。例如，
 
 ```python
 import streamlit as st
@@ -300,8 +300,8 @@ st.session_state.unserializable = unserializable_data()
 
 ### 注意事项和限制
 
-在使用会话状态时，请记住以下一些限制：
+在使用会话状态时，请记住以下限制：
 
-- 会话状态存在于标签页打开并连接到Streamlit服务器的时间内。一旦关闭标签页，存储在会话状态中的所有内容都会丢失。
-- 会话状态不会持久化。如果Streamlit服务器崩溃，那么存储在会话状态中的所有内容都会被清除。
-- 有关会话状态 API 的注意事项和限制，请参阅 [API 限制](/library/api-reference/session-state#caveats-and-limitations)。
+- 会话状态仅在选项卡打开且连接到Streamlit服务器时存在。一旦关闭选项卡，会话状态中存储的所有内容都会丢失。
+- 会话状态不会持久保存。如果Streamlit服务器崩溃，则会话状态中存储的所有内容都会被清除。
+- 有关会话状态API的注意事项和限制，请参阅[API限制](/library/api-reference/session-state#caveats-and-limitations)。

@@ -1,35 +1,35 @@
 ---
-title: 配置
 slug: /library/advanced-features/configuration
+title: Configuration
 ---
 
 # 配置
 
-Streamlit 提供了四种不同的设置配置选项的方式。此列表按优先级逆序排列，即当相同的配置选项被多次提供时，命令行标志优先于环境变量。
+Streamlit提供了四种不同的设置配置选项的方式。此列表按照优先级的顺序排列，即当多次提供相同的配置选项时，命令行标志优先于环境变量。
 
-<Note>
+<注意>
 
-如果在应用程序运行时对 `.streamlit/config.toml` 进行更改，需要重新启动服务器才能在应用程序中反映出更改。
+如果在应用程序运行时对`.streamlit/config.toml`进行更改，则需要重新启动服务器以使更改在应用程序中生效。
 
-</Note>
+</注意>
 
-1. 在 **全局配置文件** 中，位于 `~/.streamlit/config.toml`（macOS/Linux）或 `%userprofile%/.streamlit/config.toml`（Windows）：
+1. 在 macOS/Linux 上的全局配置文件 `~/.streamlit/config.toml`，或者在 Windows 上的 `%userprofile%/.streamlit/config.toml` 中：
 
    ```toml
    [server]
    port = 80
    ```
 
-2. 在 **每个项目的配置文件** 中，位于 `$CWD/.streamlit/config.toml`，其中 `$CWD` 是您运行 Streamlit 的文件夹。
+2. 在项目文件夹中的每个项目配置文件 `$CWD/.streamlit/config.toml` 中，其中 `$CWD` 是您正在运行 Streamlit 的文件夹。
 
-3. 通过 `STREAMLIT_*` **环境变量** 进行配置，例如：
+3. 通过 `STREAMLIT_*` 环境变量进行配置，例如：
 
    ```bash
    export STREAMLIT_SERVER_PORT=80
    export STREAMLIT_SERVER_COOKIE_SECRET=dontforgottochangeme
    ```
 
-4. 当运行 `streamlit run` 命令时，可以通过**命令行参数**来设置选项:
+4. 在运行`streamlit run`时，可以通过命令行中的**标志**来设置：
 
    ```bash
    streamlit run your_script.py --server.port 80
@@ -37,35 +37,36 @@ Streamlit 提供了四种不同的设置配置选项的方式。此列表按优�
 
 <提示>
 
-要在Streamlit社区云上设置配置选项，请阅读Streamlit社区云文档中的[可选项，添加配置文件](/streamlit-community-cloud/get-started/deploy-an-app#optionally-add-a-configuration-file)。
+要在Streamlit Community Cloud上设置配置选项，请参阅Streamlit Community Cloud文档中的[可选项，添加配置文件](/streamlit-community-cloud/get-started/deploy-an-app#optionally-add-a-configuration-file)。
 </提示>
 
 ## 遥测
 
-如安装过程中所提到的，Streamlit会收集使用统计信息。您可以了解到
-通过阅读我们的[隐私声明](https://streamlit.io/privacy-policy)，了解更多信息，但简要概述如下：虽然我们收集遥测数据，但我们无法查看和存储在Streamlit应用程序中包含的信息。
+如安装过程中所述，Streamlit会收集使用统计数据。您可以了解到
+通过阅读我们的[隐私声明](https://streamlit.io/privacy-policy)，了解更多信息，但总体概述是，尽管我们收集遥测数据，但我们无法查看并且不存储在Streamlit应用中包含的信息。
 
-如果您希望选择退出使用统计数据，请将以下内容添加到您的配置文件中：
+如果您想选择退出使用统计数据，请将以下内容添加到您的配置文件中：
 
 ```toml
 [browser]
 gatherUsageStats = false
 ```
 
-## 主题化
+## 主题设置
 
-您可以使用配置系统中的`[theme]`部分来更改应用程序的基本颜色。
-要了解更多信息，请参阅[主题化](/library/advanced-features/theming)。
+您可以使用配置系统的`[theme]`部分更改应用程序的基本颜色。
+要了解更多信息，请参阅[主题设置](/library/advanced-features/theming)。
 
 ## 查看所有配置选项
 
-如[命令行选项](/library/advanced-features/cli)中所述，您可以使用以下命令查看所有可用的配置选项：
+如[命令行选项](/library/advanced-features/cli)中所述，您可以
+使用以下命令查看所有可用的配置选项：
 
 ```bash
 streamlit config show
 ```
 
-上面的命令将会打印出类似下面的内容：
+上面的命令将打印出类似下面的内容：
 
 ```toml
 # Streamlit version: 1.23.0

@@ -1,19 +1,19 @@
 ---
-title: 创建多页应用
 slug: /library/get-started/multipage-apps/create-a-multipage-app
+title: Create a multipage app
 ---
 
-# 创建多页应用
+# 创建一个多页面应用
 
-在[上一节](/library/get-started/multipage-apps)中，我们学习了创建多页应用所需的内容，包括如何定义页面、组织和运行多页应用以及在用户界面中导航页面。如果您需要回顾，请现在参阅一下。
+在[上一节](/library/get-started/multipage-apps)中，我们学习了创建多页面应用所需的内容，包括如何定义页面、构建和运行多页面应用，以及在用户界面中导航页面。如果您需要恢复记忆，现在是一个好时机去看一下。
 
-在这个指南中，我们将利用多页面应用的理解，将熟悉的 `streamlit hello` 命令转换为一个多页面应用程序！
+在本指南中，让我们利用对多页面应用的理解，将熟悉的`streamlit hello`命令转换为一个多页面应用！
 
 ## 动机
 
-在 Streamlit 1.10.0 之前，streamlit hello 命令是一个大型的单页面应用。由于不支持多页面，我们使用 `st.selectbox` 在侧边栏中选择要运行的内容来拆分应用的内容。这些内容包括绘图、地图和数据框的三个演示。
+在 Streamlit 1.10.0 之前，streamlit hello 命令是一个庞大的单页面应用程序。由于不支持多页面，我们使用侧边栏中的 `st.selectbox` 来选择要运行的内容来拆分应用程序的内容。内容由三个演示用于绘图、地图和数据框组成。
 
-以下是代码和单页面应用程序的样子：
+下面是代码和单页面应用程序的示例：
 
 <details>
 <summary><b><code>hello.py</code></b>  (👈 点击展开)</summary>
@@ -256,22 +256,22 @@ page_names_to_funcs[demo_name]()
 
 <Cloud src="https://doc-hello.streamlit.app/?embed=true" height="700" />
 
-注意文件的大小！每个应用程序“页面”都被写成一个函数，并且使用`st.selectbox`用于选择要显示的页面。随着应用程序的增长，维护代码需要很多额外的开销。此外，我们受限于`st.selectbox`界面来选择要运行的“页面”，我们无法使用`st.set_page_config`自定义各个页面的标题，并且无法使用URL在页面之间进行导航。
+注意文件的大小！每个应用程序“页面”都被编写为一个函数，并且使用selectbox来选择要显示的页面。随着我们的应用程序的增长，维护代码需要很多额外的开销。此外，我们受限于`st.selectbox`界面来选择要运行的“页面”，我们无法使用`st.set_page_config`自定义单个页面的标题，并且我们无法使用URL在页面之间导航。
 
 ## 将现有应用程序转换为多页面应用程序
 
-既然我们已经确定了单页面应用程序的局限性，那么我们该怎么办呢？当然是根据我们在前一节中的知识，将现有的应用程序转换为多页面应用程序！从高层次来说，我们需要执行以下步骤：
+既然我们已经确定了单页面应用程序的局限性，我们该怎么办呢？当然可以根据我们在前一节中的知识，将现有的应用程序转换为多页面应用程序！在高层次上，我们需要执行以下步骤：
 
-1. 在与“入口文件”（`hello.py`）位于同一文件夹中创建一个新的`pages`文件夹。
-2. 将入口文件重命名为 `Hello.py` ，这样侧边栏的标题就会大写
-3. 在 `pages` 目录下创建三个新文件：
+1. 在“入口文件”(`hello.py`)所在的同一文件夹中创建一个新的`pages`文件夹
+2. 将我们的入口文件重命名为`Hello.py`，以使侧边栏的标题大写
+3. 在`pages`文件夹中创建三个新文件：
    - `pages/1_📈_Plotting_Demo.py`
    - `pages/2_🌍_Mapping_Demo.py`
    - `pages/3_📊_DataFrame_Demo.py`
-4. 将 `plotting_demo`、`mapping_demo` 和 `data_frame_demo` 函数的内容移动到步骤3中对应的新文件中
-5. 运行 `streamlit run Hello.py` 查看您新转换的多页面应用程序！
+4. 将`plotting_demo`、`mapping_demo`和`data_frame_demo`函数的内容移到第3步中对应的新文件中
+5. 运行`streamlit run Hello.py`来查看您新转换的多页面应用程序！
 
-现在，让我们逐步介绍每个步骤并查看代码中的相应更改。
+现在，让我们逐步介绍整个过程，并查看代码中的相应变化。
 
 ## 创建入口文件
 
@@ -312,7 +312,7 @@ st.markdown(
 </details>
 <br />
 
-我们将入口文件重命名为`Hello.py`，这样侧边栏中的标题就会大写，并且只包含简介页面的代码。此外，我们还可以使用`st.set_page_config`来自定义页面标题和favicon，它将显示在浏览器标签中。我们还可以为每个页面进行相同的操作！
+我们将入口文件重命名为`Hello.py`，这样侧边栏的标题就会大写，并且只包含介绍页面的代码。此外，我们还可以使用`st.set_page_config`来自定义页面标题和网页图标，它会显示在浏览器选项卡中。我们也可以为每个页面进行相同的设置！
 
 <Image src="/images/mpa-hello.png" />
 
@@ -320,14 +320,14 @@ st.markdown(
 
 ## 创建多个页面
 
-在这里需要记住几个事项：
+在这里需要记住几件事情：
 
-1. 我们可以通过在每个 Python 文件的开头添加数字来更改 MPA 中页面的顺序。如果我们在文件名前面添加一个 1，Streamlit 将把该文件放在列表的第一位。
-2. 每个 Streamlit 应用的名称由文件名确定，所以要更改应用名称，您需要更改文件名！
-3. 我们可以通过在文件名中添加表情符号来为我们的应用增添一些趣味，这些表情符号将在我们的 Streamlit 应用中呈现。
-4. 每个页面都有自己的URL，由文件的名称定义。
+1. 我们可以通过在每个Python文件的开头添加数字来改变MPA中页面的排序。如果我们在文件名前面添加一个1，Streamlit会将该文件放在列表中的第一个位置。
+2. 每个Streamlit应用程序的名称由文件名确定，因此要更改应用程序名称，您需要更改文件名！
+3. 我们可以通过在文件名中添加表情符号来为我们的应用程序增添一些乐趣，这些表情符号将在我们的Streamlit应用程序中呈现。
+4. 每个页面都有自己的URL，由文件名定义。
 
-请查看下面我们是如何完成所有这些的！对于每个新页面，我们在pages文件夹中创建一个新文件，并在其中添加适当的演示代码。
+查看下面的示例！对于每个新页面，我们在`pages`文件夹中创建一个新文件，并将适当的演示代码添加到其中。
 
 <br />
 
@@ -479,7 +479,7 @@ except URLError as e:
 
 </details>
 
-![mpa-mapping-demo.png](/images/mpa-mapping-demo.png)
+![mpa-mapping-demo](/images/mpa-mapping-demo.png)
 
 <details>
 <summary><code>pages/3_📊_DataFrame_Demo.py</code></summary>
@@ -547,28 +547,28 @@ except URLError as e:
 
 <Image src="/images/mpa-dataframe-demo.png" />
 
-有了我们创建的附加页面，现在可以在下面的最后一步将它们整合在一起。
+现在我们已经创建了额外的页面，我们可以在下面的最后一步中将它们整合在一起。
 
-## 运行多页面应用程序
+## 运行多页面应用
 
-要运行您新转换的多页面应用程序，请运行：
+要运行您刚刚转换的多页面应用程序，请运行：
 
 ```bash
 streamlit run Hello.py
 ```
 
-就是这样！`Hello.py`脚本现在对应于您的应用程序的主页面，Streamlit在pages文件夹中找到的其他脚本也将出现在侧边栏中的新页面选择器中。
+就是这样！`Hello.py`脚本现在对应于您的应用程序的主页，Streamlit在pages文件夹中找到的其他脚本也将出现在侧边栏中的新页面选择器中。
 
 <Cloud src="https://doc-mpa-hello.streamlit.app/?embed=true" height="700" />
 
-## 下一步操作
+## 下一步
 
-恭喜！🎉 如果您已经阅读到这里，那么很可能您已经学会创建单页和多页应用程序。接下来的发展完全取决于您的创造力！我们很期待看到您在现在更容易添加额外页面到应用程序之后会构建什么样的应用。尝试在刚刚构建的应用程序中添加更多页面作为练习。此外，也可以到论坛与Streamlit社区展示您的多页应用程序！🎈
+恭喜！🎉如果您已经读到这里，那么很有可能您已经学会了创建单页面和多页面应用程序。您接下来的选择完全取决于您的创造力！我们很期待看到您在现在更容易添加额外页面到您的应用程序后将会构建什么。试着在我们刚刚构建的应用程序中添加更多页面作为练习。此外，欢迎到论坛与Streamlit社区分享您的多页面应用程序！🎈
 
-以下是一些资源，帮助您入门开始：
+下面是一些帮助您入门的资源:
 
 - 在Streamlit的[社区云](/streamlit-community-cloud)上免费部署您的应用程序。
 - 在我们的[社区论坛](https://discuss.streamlit.io/c/streamlit-examples/9)上提问或分享您的多页面应用程序。
-- 查看我们关于[多页面应用程序](/library/get-started/multipage-apps)的文档。
-- 阅读关于高级功能的[高级特性](/library/advanced-features)，例如缓存、主题和向应用程序添加状态。
+- 查看我们的[multipage apps](/library/get-started/multipage-apps)文档。
+- 阅读[高级特性](/library/advanced-features)以了解诸如缓存、主题和为应用程序添加状态的功能。
 - 浏览我们的[API参考文档](/library/api-reference/)，了解每个Streamlit命令的示例。

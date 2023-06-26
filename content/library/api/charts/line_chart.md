@@ -1,7 +1,7 @@
 ---
-title: st.line_chart
+description: st.line_chart displays a line chart.
 slug: /library/api-reference/charts/st.line_chart
-description: st.line_chart显示一张折线图。
+title: st.line_chart
 ---
 
-<Autofunction function="streamlit.line_chart" />
+`<Autofunction function="streamlit.line_chart" />`

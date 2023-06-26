@@ -1,18 +1,18 @@
 ---
-title: 图表元素
 slug: /library/api-reference/charts
+title: Chart elements
 ---
 
 # 图表元素
 
-Streamlit支持多种不同的图表库，并且我们的目标是不断添加对更多图表库的支持。目前，我们库中最基本的库是[Matplotlib](https://matplotlib.org/)。还有一些交互式的图表库，比如[Vega Lite](https://vega.github.io/vega-lite/)（2D图表）和[deck.gl](https://github.com/uber/deck.gl)（地图和3D图表）。
-最后，我们还提供了一些在Streamlit中“原生”支持的图表类型，例如`st.line_chart`和`st.area_chart`。
+Streamlit支持多种不同的图表库，并且我们的目标是不断增加对更多图表库的支持。目前，在我们的工具库中最基本的库是[Matplotlib](https://matplotlib.org/)。然后还有一些交互式图表库，如[Vega Lite](https://vega.github.io/vega-lite/)（2D图表）和[deck.gl](https://github.com/uber/deck.gl)（地图和3D图表）。最后，我们还提供了一些对Streamlit来说是“原生”的图表类型，
+像 `st.line_chart` 和 `st.area_chart` 这样的函数。
 
 <TileContainer>
 <RefCard href="/library/api-reference/charts/st.line_chart">
 <Image pure alt="screenshot" src="/images/api/line_chart.jpg" />
 
-#### 简单的折线图
+#### 简单折线图
 
 显示一个折线图。
 
@@ -36,9 +36,9 @@ st.area_chart(my_data_frame)
 <RefCard href="/library/api-reference/charts/st.bar_chart">
 <Image pure alt="screenshot" src="/images/api/bar_chart.jpg" />
 
-#### Simple bar charts
+#### 简单柱状图
 
-Display a bar chart.
+显示柱状图。
 
 ```python
 st.bar_chart(my_data_frame)
@@ -50,7 +50,7 @@ st.bar_chart(my_data_frame)
 
 #### 在地图上显示散点图
 
-在地图上显示带有点的地图。
+在地图上显示带有数据点的图表。
 
 ```python
 st.map(my_data_frame)
@@ -62,7 +62,7 @@ st.map(my_data_frame)
 
 #### Matplotlib
 
-显示一个matplotlib.pyplot的图形。
+显示一个matplotlib.pyplot的图像。
 
 ```python
 st.pyplot(my_mpl_figure)
@@ -110,7 +110,7 @@ st.plotly_chart(my_plotly_chart)
 
 #### Bokeh
 
-显示一个交互式的Bokeh图表。
+展示一个交互式的Bokeh图表。
 
 ```python
 st.bokeh_chart(my_bokeh_chart)
@@ -130,11 +130,11 @@ st.pydeck_chart(my_pydeck_chart)
 
 </RefCard>
 <RefCard href="/library/api-reference/charts/st.graphviz_chart">
-<Image pure alt="截图" src="/images/api/graphviz_chart.jpg" />
+<Image pure alt="screenshot" src="/images/api/graphviz_chart.jpg" />
 
 #### GraphViz
 
-使用dagre-d3库展示一个图形。
+使用dagre-d3库显示图形。
 
 ```python
 st.graphviz_chart(my_graphviz_spec)
@@ -151,7 +151,7 @@ st.graphviz_chart(my_graphviz_spec)
 
 #### Plost
 
-一款Streamlit的看似简单的绘图库。由[@tvst](https://github.com/tvst)创建。
+一个Streamlit的看似简单的绘图库。由[@tvst](https://github.com/tvst)创建。
 
 ```python
 import plost
@@ -166,7 +166,7 @@ plost.line_chart(my_dataframe, x='time', y='stock_value', color='stock_name',)
 
 #### HiPlot
 
-高维交互式绘图。由[@facebookresearch](https://github.com/facebookresearch)创建。
+高维交互式绘图工具。由[@facebookresearch](https://github.com/facebookresearch)创建。
 
 ```python
 data = [{'dropout':0.1, 'lr': 0.001, 'loss': 10.0, 'optimizer': 'SGD'}, {'dropout':0.15, 'lr': 0.01, 'loss': 3.5, 'optimizer': 'Adam'}, {'dropout':0.3, 'lr': 0.1, 'loss': 4.5, 'optimizer': 'Adam'}]
@@ -181,7 +181,7 @@ hip.Experiment.from_iterable(data).display()
 
 #### ECharts
 
-高维交互式绘图。由[@andfanilo](https://github.com/andfanilo)创建。
+高维度交互绘图。由[@andfanilo](https://github.com/andfanilo)创建。
 
 ```python
 from streamlit_echarts import st_echarts
@@ -211,7 +211,7 @@ st_data = st_folium(m, width=725)
 
 #### Spacy-Streamlit
 
-spaCy构建的组件和可视化工具，用于Streamlit应用程序。由[@explosion](https://github.com/explosion)创建。
+spaCy构建块和可视化工具，适用于Streamlit应用程序。由[@explosion](https://github.com/explosion)创建。
 
 ```python
 models = ["en_core_web_sm", "en_core_web_md"]
@@ -256,7 +256,7 @@ st_lottie(lottie_hello, key="hello")
 
 #### Plotly 事件
 
-使 Plotly 图表具有互动性！由 [@null-jones](https://github.com/null-jones/) 创建。
+使Plotly图表具有交互功能！由[@null-jones](https://github.com/null-jones/)创建。
 
 ```python
 fig = px.line(x=[1], y=[1])
@@ -271,7 +271,7 @@ selected_points = plotly_events(fig)
 
 #### Streamlit Extras
 
-一个包含有用的Streamlit扩展库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
+一个包含有用的Streamlit扩展的库。由[@arnaudmiribel](https://github.com/arnaudmiribel/)创建。
 
 ```python
 chart += get_annotations_chart(annotations=[("Mar 01, 2008", "Pretty good day for GOOG"), ("Dec 01, 2007", "Something's going wrong for GOOG & AAPL"), ("Nov 01, 2008", "Market starts again thanks to..."), ("Dec 01, 2009", "Small crash for GOOG after..."),],)

@@ -1,7 +1,7 @@
 ---
-title: st.expander
+description: st.expander inserts a multi-element container that can be expanded/collapsed.
 slug: /library/api-reference/layout/st.expander
-description: st.expander插入一个多元素容器，可以展开/折叠。
+title: st.expander
 ---
 
 <Autofunction function="streamlit.expander" />

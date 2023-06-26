@@ -1,7 +1,7 @@
 ---
-title: st.audio
+description: st.audio displays an audio player.
 slug: /library/api-reference/media/st.audio
-description: st.audio显示一个音频播放器。
+title: st.audio
 ---
 
 <Autofunction function="streamlit.audio" />

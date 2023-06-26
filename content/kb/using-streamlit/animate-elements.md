@@ -1,11 +1,11 @@
 ---
-title: 如何为元素添加动画效果？
 slug: /knowledge-base/using-streamlit/animate-elements
+title: How to animate elements?
 ---
 
 # 如何为元素添加动画效果？
 
-让我们结合您学到的一些知识，为您的应用程序创建引人注目的动画效果。
+让我们结合你学到的一些知识，为你的应用程序创建引人注目的动画效果。
 
 ```python
 progress_bar = st.progress(0)

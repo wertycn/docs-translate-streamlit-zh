@@ -1,3 +1,7 @@
-# st.experimental_connection 演示
+---
+{}
+---
 
-这是一个使用 st.experimental_connection 的演示应用程序。在云中运行时需要 SQL、S3、GCS 的 secrets。还可以使用 Snowpark secrets。
+# st.experimental_connection演示
+
+这是一个使用st.experimental_connection的演示应用程序。在云中运行时，需要使用SQL、S3、GCS的密钥。还可以使用Snowpark密钥。

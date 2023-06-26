@@ -1,5 +1,4 @@
 ---
-title: 欢迎使用Streamlit
 features:
   - title: 入门指南
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -76,6 +75,36 @@ news:
       urna, rutrum vel arcu sit amet, aliquam lobortis est.
     url: https://www.streamlit.io
 next: get-started
+title: Welcome to Streamlit
+whats_new:
+- body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a facilisis
+    sagittis, vitae nibh massa in facilisis et. Pretium eget non cursus purus tempus
+    porta sodales.
+  icon: visibility
+  image: /img/logo.svg
+  title: Feature title
+  url: /library/get-started
+- body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a facilisis
+    sagittis, vitae nibh massa in facilisis et. Pretium eget non cursus purus tempus
+    porta sodales.
+  icon: visibility
+  image: ''
+  title: Feature title
+  url: /library/get-started
+- body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a facilisis
+    sagittis, vitae nibh massa in facilisis et. Pretium eget non cursus purus tempus
+    porta sodales.
+  icon: edit
+  image: /img/logo.svg
+  title: Feature title
+  url: /library/get-started
+- body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a facilisis
+    sagittis, vitae nibh massa in facilisis et. Pretium eget non cursus purus tempus
+    porta sodales.
+  icon: edit
+  image: ''
+  title: Feature title
+  url: /library/get-started
 ---
 
-[Streamlit](https://www.streamlit.io) 是一个开源的Python库，可用于快速创建和分享漂亮、定制的机器学习和数据科学的Web应用程序。只需几分钟，您就可以构建和部署强大的数据应用程序 - 让我们开始吧！
+[Streamlit](https://www.streamlit.io) 是一个开源的 Python 库，可以轻松创建和共享漂亮的、定制化的 Web 应用程序，用于机器学习和数据科学。只需几分钟，您就可以构建和部署强大的数据应用程序 - 让我们开始吧！

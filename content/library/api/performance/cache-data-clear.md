@@ -1,13 +1,14 @@
 ---
-标题: st.cache_data.clear
+description: st.cache_data.clear clears all in-memory and on-disk data caches.
 slug: /library/api-reference/performance/st.cache_data.clear
-描述: st.cache_data.clear清除所有内存和磁盘数据缓存。
+title: st.cache_data.clear
+---
 
 <Autofunction function="streamlit.cache_data.clear" />
 
 #### 示例
 
-在下面的示例中，点击"清除全部"按钮将清除所有使用`@st.cache_data`装饰的函数的缓存值。
+在下面的示例中，按下"清除全部"按钮将清除所有使用`@st.cache_data`修饰的函数的备忘值。
 
 ```python
 import streamlit as st

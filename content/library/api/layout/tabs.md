@@ -1,7 +1,7 @@
 ---
-title: st.tabs
+description: st.tabs inserts containers separated into tabs.
 slug: /library/api-reference/layout/st.tabs
-description: st.tabs将容器分隔成标签页。
+title: st.tabs
 ---
 
 <Autofunction function="streamlit.tabs" />

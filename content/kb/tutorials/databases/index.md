@@ -1,18 +1,16 @@
 ---
-title: 连接数据源
 slug: /knowledge-base/tutorials/databases
+title: Connect to data sources
 ---
 
 # 连接 Streamlit 到数据源
 
-这些逐步指南演示了如何将 Streamlit 应用程序连接到各种数据库和 API。
-它们使用 Streamlit 的[秘密管理](/streamlit-community-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)和
-[缓存](/library/advanced-features/caching)来提供安全和快速的数据访问。
+这些逐步指南演示了如何将 Streamlit 应用程序连接到各种数据库和 API。它们使用 Streamlit 的[秘密管理](/streamlit-community-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)和[缓存](/library/advanced-features/caching)来提供安全和快速的数据访问。
 
 <DataSourcesContainer>
 <DataSourcesCard href="/knowledge-base/tutorials/databases/aws-s3">
 
-<Image pure alt="screenshot" src="/images/databases/s3.png" />
+<img pure alt="屏幕截图" src="/images/databases/s3.png" />
 
 <h5>AWS S3</h5>
 
@@ -20,7 +18,7 @@ slug: /knowledge-base/tutorials/databases
 
 <DataSourcesCard href="/knowledge-base/tutorials/databases/bigquery">
 
-<Image pure alt="screenshot" src="/images/databases/bigquery.png" />
+<img pure alt="屏幕截图" src="/images/databases/bigquery.png" />
 
 <h5>BigQuery</h5>
 
@@ -28,9 +26,9 @@ slug: /knowledge-base/tutorials/databases
 
 <DataSourcesCard href="/knowledge-base/tutorials/databases/deta-base">
 
-<Image pure alt="screenshot" src="/images/databases/deta-base.png" />
+<img pure alt="屏幕截图" src="/images/databases/deta-base.png" />
 
-<h5>数据源</h5>
+<h5>Deta Base</h5>
 
 </DataSourcesCard>
 
@@ -52,25 +50,23 @@ slug: /knowledge-base/tutorials/databases
 
 <DataSourcesCard href="/knowledge-base/tutorials/databases/mssql">
 
-<img alt="screenshot" src="/images/databases/mssql.png" />
+![screenshot](/images/databases/mssql.png)
 
-<h5>Microsoft SQL Server</h5>
-
-</DataSourcesCard>
-
-<DataSourcesCard href="/knowledge-base/tutorials/databases/mongodb">
-
-<img alt="screenshot" src="/images/databases/mongodb.png" />
-
-<h5>MongoDB</h5>
+# Microsoft SQL Server
 
 </DataSourcesCard>
 
-<DataSourcesCard href="/knowledge-base/tutorials/databases/mysql">
+</DataSourcesCard>
 
-<img alt="screenshot" src="/images/databases/mysql.png" />
+![screenshot](/images/databases/mongodb.png)
 
-<h5>MySQL</h5>
+# MongoDB
+
+</DataSourcesCard>
+
+![screenshot](/images/databases/mysql.png)
+
+# MySQL
 
 </DataSourcesCard>
 
@@ -86,31 +82,31 @@ slug: /knowledge-base/tutorials/databases
 
 <Image pure alt="screenshot" src="/images/databases/gsheet.png" />
 
-<h5>私有 Google 表格</h5>
+<h5>Private Google Sheet</h5>
 
 </DataSourcesCard>
 
 <DataSourcesCard href="/knowledge-base/tutorials/databases/public-gsheet">
 
-![screenshot](/images/databases/gsheet.png)
+<img alt="screenshot" src="/images/databases/gsheet.png" />
 
-##### 公共Google表格
-
-</DataSourcesCard>
-
-</DataSourcesCard href="/knowledge-base/tutorials/databases/snowflake">
-
-![screenshot](/images/databases/snowflake.png)
-
-##### Snowflake
+<h5>公共谷歌表</h5>
 
 </DataSourcesCard>
 
-</DataSourcesCard href="/knowledge-base/tutorials/databases/supabase">
+<DataSourcesCard href="/knowledge-base/tutorials/databases/snowflake">
 
-![screenshot](/images/databases/supabase.png)
+<img alt="screenshot" src="/images/databases/snowflake.png" />
 
-##### Supabase
+<h5>Snowflake</h5>
+
+</DataSourcesCard>
+
+<DataSourcesCard href="/knowledge-base/tutorials/databases/supabase">
+
+<img alt="screenshot" src="/images/databases/supabase.png" />
+
+<h5>Supabase</h5>
 
 </DataSourcesCard>
 

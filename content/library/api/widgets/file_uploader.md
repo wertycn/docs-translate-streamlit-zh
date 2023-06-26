@@ -1,7 +1,7 @@
 ---
-标题: st.file_uploader
-链接: /library/api-reference/widgets/st.file_uploader
-描述: st.file_uploader显示一个文件上传小部件。
+description: st.file_uploader displays a file uploader widget.
+slug: /library/api-reference/widgets/st.file_uploader
+title: st.file_uploader
 ---
 
-<Autofunction function="streamlit.file_uploader" />
+`<Autofunction function="streamlit.file_uploader" />`

@@ -1,7 +1,7 @@
 ---
-标题: st.info
-链接: /library/api-reference/status/st.info
-描述: st.info用于显示信息性消息。
+description: st.info displays an informational message.
+slug: /library/api-reference/status/st.info
+title: st.info
+---
 
 <Autofunction function="streamlit.info" />
----

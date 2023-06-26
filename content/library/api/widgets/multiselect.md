@@ -1,7 +1,8 @@
 ---
-标题：st.multiselect
-网址：/library/api-reference/widgets/st.multiselect
-描述：st.multiselect显示一个多选小部件。多选小部件一开始是空的。
+description: st.multiselect displays a multiselect widget. The multiselect widget
+  starts as empty.
+slug: /library/api-reference/widgets/st.multiselect
+title: st.multiselect
 ---
 
-<Autofunction function="streamlit.multiselect" />
+`<Autofunction function="streamlit.multiselect" />`
