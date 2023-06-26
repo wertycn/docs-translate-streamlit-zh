@@ -1,7 +1,7 @@
 ---
 title: 欢迎使用Streamlit
 features:
-  - title:入门指南
+  - title: 入门指南
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     color: violet-70
     icon: arrow_forward
