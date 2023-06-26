@@ -1,6 +1,6 @@
 ---
+title: 知识库
 slug: /knowledge-base
-title: Knowledge Base
 ---
 
 # 知识库
