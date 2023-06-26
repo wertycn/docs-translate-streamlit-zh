@@ -22,7 +22,7 @@ features:
       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
       sed quia.
     image: ""
-whats_new:
+whats_new: 
   - title: Feature title
     body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend a
       facilisis sagittis, vitae nibh massa in facilisis et. Pretium eget non
